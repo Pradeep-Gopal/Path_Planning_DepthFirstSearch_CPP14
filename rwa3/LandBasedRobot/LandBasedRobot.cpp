@@ -2,36 +2,31 @@
 // Created by prade on 4/22/2020.
 //
 
+#include <iostream>
 #include "LandBasedRobot.h"
 
 void rwa3::LandBasedRobot::GoUp(int x_, int y_) {
-    std::cout <<"LandBasedRobot::GoUp function called\n" <<std::endl;
-    std::cout <<x_, y_ <<std::endl
+    std::cout <<"LandBasedRobot::GoUp is called\n" <<std::endl;
 }
 
 void rwa3::LandBasedRobot::GoDown(int x_, int y_) {
-    std::cout <<"LandBasedRobot::GoDown function called\n" <<std::endl;
-    std::cout <<x_, y_ <<std::endl
+    std::cout <<"LandBasedRobot::GoDown is called\n" <<std::endl;
 }
 
 void rwa3::LandBasedRobot::TurnLeft(int x_, int y_) {
-    std::cout <<"LandBasedRobot::TurnLeft function called\n" <<std::endl;
-    std::cout <<x_, y_ <<std::endl
+    std::cout <<"LandBasedRobot::TurnLeft is called\n" <<std::endl;
 }
 
 void rwa3::LandBasedRobot::TurnRight(int x_, int y_) {
-    std::cout <<"LandBasedRobot::TurnRight function called\n" <<std::endl;
-    std::cout <<x_, y_ <<std::endl
+    std::cout <<"LandBasedRobot::TurnRight is called\n" <<std::endl;
 }
 
 void rwa3::LandBasedRobot::PickUp(std::string& pick) {
-    std::cout <<"LandBasedRobot::Pickup function called\n" <<std::endl;
-    std::cout << pick <<std::endl
+    std::cout <<"LandBasedRobot::Pickup is called\n" <<std::endl;
 }
 
 void rwa3::LandBasedRobot::Release(std::string& release) {
-    std::cout <<"LandBasedRobot::Release function called\n" <<std::endl;
-    std::cout << release <<std::endl
+    std::cout <<"LandBasedRobot::Release is called\n" <<std::endl;
 }
 
 //--accessors

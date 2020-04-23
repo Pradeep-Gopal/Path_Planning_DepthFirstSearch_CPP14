@@ -7,10 +7,14 @@
 //--prototype
 void FollowActionPath(std::shared_ptr<rwa3::LandBasedRobot> robot,
                       const std::vector<std::string> &vec, std::string obj);
+
 void FollowActionPath(std::shared_ptr<rwa3::LandBasedRobot> robot,
                       const std::vector<std::string> &vec,std::string obj){
     int x{robot->get_x()};//--should be 1 for wheeled and 2 for tracked
+    std::cout <<x <<std::endl;
+    std::cout<<"\n";
     int y{robot->get_y()};//--should be 4 for wheeled and 3 for tracked
+    std::cout << y <<std::endl;
     for (auto s: vec){
         if (s.compare("up")==0)
             robot->GoUp(x,y);

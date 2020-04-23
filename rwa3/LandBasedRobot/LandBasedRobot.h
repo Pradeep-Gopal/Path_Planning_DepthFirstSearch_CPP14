@@ -11,12 +11,12 @@ namespace rwa3 {
 
     public:
         //--method prototypes
-        void GoUp(int x_, int y_);  //Move the robot up in the maze
-        void GoDown(int x_, int y_);  //Move the robot down in the maze
-        void TurnLeft(int x_, int y_);  //Move the robot left in the maze
-        void TurnRight(int x_, int y_);  //Move the robot right in the maze
-        void PickUp(std::string& pick);  //Arm picks up an object
-        void Release(std::string& release);  //Arm releases an object.
+        virtual void GoUp(int x_, int y_)=0;  //Move the robot up in the maze
+        virtual void GoDown(int x_, int y_);  //Move the robot down in the maze
+        virtual void TurnLeft(int x_, int y_);  //Move the robot left in the maze
+        virtual void TurnRight(int x_, int y_);  //Move the robot right in the maze
+        virtual void PickUp(std::string& pick);  //Arm picks up an object
+        virtual void Release(std::string& release);  //Arm releases an object.
         int get_x() const;//--get the x coordinate of a robot
         int get_y() const;//--get the y coordinate of a robot
         void set_x(int x); //--set the x coordinate of a robot
@@ -30,7 +30,7 @@ namespace rwa3 {
         }
 
         //-- destructor
-        ~LandBasedRobot(){}
+        virtual ~LandBasedRobot(){}
 
     protected:
         //--attributes
