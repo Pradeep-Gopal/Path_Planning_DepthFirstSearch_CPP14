@@ -31,9 +31,10 @@ namespace rwa3 {
                 *source.track_type){}
 
         //--Constructor
+        LandBasedTracked() : LandBasedTracked("LandBasedTrackedRobot",1,3,"flat"){}
 
-        LandBasedTracked(std::string name, int x, int y) : LandBasedTracked(name, x, y, "flat"){
-        }
+        LandBasedTracked(std::string name, int x, int y) : LandBasedTracked(name, x, y, "flat"){}
+
         LandBasedTracked(std::string name, int x, int y, std::string t_type) : LandBasedRobot(name, x, y), track_type{nullptr} {
             //auto* track_type = new std::string;
             //*track_type = t_type;
