@@ -17,6 +17,10 @@ namespace rwa3 {
         virtual void TurnRight(int x_, int y_) override;  //Move the robot right in the maze
         virtual void PickUp(std::string& pick) override;  //Arm picks up an object
         virtual void Release(std::string& release) override;  //Arm releases an object.
+        virtual int get_x() const override;//--get the x coordinate of a robot
+        virtual int get_y() const override;//--get the y coordinate of a robot
+        virtual void set_x(int x) override; //--set the x coordinate of a robot
+        virtual void set_y(int y) override ; //--set the y coordinate of a robot
 
 
         // Deep copy constructor
@@ -30,7 +34,7 @@ namespace rwa3 {
 
         LandBasedTracked(std::string name, int x, int y) : LandBasedTracked(name, x, y, "flat"){
         }
-        LandBasedTracked(std::string name, int x, int y, std::string t_type) : LandBasedRobot(name_, x_, y_), track_type{nullptr} {
+        LandBasedTracked(std::string name, int x, int y, std::string t_type) : LandBasedRobot(name, x, y), track_type{nullptr} {
             auto* track_type = new std::string;
             *track_type = t_type;
         }

@@ -12,15 +12,15 @@ namespace rwa3 {
     public:
         //--method prototypes
         virtual void GoUp(int x_, int y_)=0;  //Move the robot up in the maze
-        virtual void GoDown(int x_, int y_);  //Move the robot down in the maze
-        virtual void TurnLeft(int x_, int y_);  //Move the robot left in the maze
-        virtual void TurnRight(int x_, int y_);  //Move the robot right in the maze
-        virtual void PickUp(std::string& pick);  //Arm picks up an object
-        virtual void Release(std::string& release);  //Arm releases an object.
-        int get_x() const;//--get the x coordinate of a robot
-        int get_y() const;//--get the y coordinate of a robot
-        void set_x(int x); //--set the x coordinate of a robot
-        void set_y(int y); //--set the y coordinate of a robot
+        virtual void GoDown(int x_, int y_)=0;  //Move the robot down in the maze
+        virtual void TurnLeft(int x_, int y_)=0;  //Move the robot left in the maze
+        virtual void TurnRight(int x_, int y_)=0;  //Move the robot right in the maze
+        virtual void PickUp(std::string& pick)=0;  //Arm picks up an object
+        virtual void Release(std::string& release)=0;  //Arm releases an object.
+        virtual int get_x() const=0;//--get the x coordinate of a robot
+        virtual int get_y() const=0;//--get the y coordinate of a robot
+        virtual void set_x(int x)=0; //--set the x coordinate of a robot
+        virtual void set_y(int y)=0; //--set the y coordinate of a robot
 
         //--Constructor
         //--no args

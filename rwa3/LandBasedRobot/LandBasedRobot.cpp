@@ -5,19 +5,19 @@
 #include <iostream>
 #include "LandBasedRobot.h"
 
-void rwa3::LandBasedRobot::GoUp(int x_, int y_) {
+void rwa3::LandBasedRobot::GoUp(int x, int y) {
     std::cout <<"LandBasedRobot::GoUp is called\n" <<std::endl;
 }
 
-void rwa3::LandBasedRobot::GoDown(int x_, int y_) {
+void rwa3::LandBasedRobot::GoDown(int x, int y) {
     std::cout <<"LandBasedRobot::GoDown is called\n" <<std::endl;
 }
 
-void rwa3::LandBasedRobot::TurnLeft(int x_, int y_) {
+void rwa3::LandBasedRobot::TurnLeft(int x, int y) {
     std::cout <<"LandBasedRobot::TurnLeft is called\n" <<std::endl;
 }
 
-void rwa3::LandBasedRobot::TurnRight(int x_, int y_) {
+void rwa3::LandBasedRobot::TurnRight(int x, int y) {
     std::cout <<"LandBasedRobot::TurnRight is called\n" <<std::endl;
 }
 
@@ -31,7 +31,7 @@ void rwa3::LandBasedRobot::Release(std::string& release) {
 
 //--accessors
 int rwa3::LandBasedRobot::get_x() const {
-        return x_;
+    return x_;
 }
 
 int rwa3::LandBasedRobot::get_y() const{
