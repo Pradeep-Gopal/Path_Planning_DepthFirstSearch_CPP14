@@ -39,8 +39,9 @@ namespace rwa3 {
         }
 
         LandBasedWheeled(std::string name, int x, int y, int w_number, std::string w_type) : LandBasedRobot(name, x , y), wheel_number{w_number}, wheel_type{nullptr}{
-            auto* wheel_type = new std::string;
-            *wheel_type = w_type;
+            //auto* wheel_type = new std::string;
+            //*wheel_type = w_type;
+            std::shared_ptr<std::string> wheel_type {new std::string {w_type}};
         }
 
 //--Destructor

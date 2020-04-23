@@ -35,8 +35,9 @@ namespace rwa3 {
         LandBasedTracked(std::string name, int x, int y) : LandBasedTracked(name, x, y, "flat"){
         }
         LandBasedTracked(std::string name, int x, int y, std::string t_type) : LandBasedRobot(name, x, y), track_type{nullptr} {
-            auto* track_type = new std::string;
-            *track_type = t_type;
+            //auto* track_type = new std::string;
+            //*track_type = t_type;
+            std::shared_ptr<std::string> track_type {new std::string {t_type}};
         }
 
         //--Destructor
