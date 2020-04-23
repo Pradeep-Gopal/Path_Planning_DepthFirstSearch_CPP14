@@ -1,0 +1,4 @@
+C:\Users\prade\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.6911.21\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\prade\OneDrive\Documents\UMD_Robotics\Courses\ENPM_809y_Introprog\rwa3
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/prade/OneDrive/Documents/UMD_Robotics/Courses/ENPM_809y_Introprog/rwa3/cmake-build-debug

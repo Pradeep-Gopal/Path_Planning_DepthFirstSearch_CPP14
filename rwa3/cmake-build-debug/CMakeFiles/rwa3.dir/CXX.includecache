@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/prade/OneDrive/Documents/UMD_Robotics/Courses/ENPM_809y_Introprog/rwa3/main.cpp
+iostream
+-
+
