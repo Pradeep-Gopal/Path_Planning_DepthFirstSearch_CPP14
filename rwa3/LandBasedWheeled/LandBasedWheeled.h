@@ -35,13 +35,8 @@ namespace rwa3 {
                 ){}
 
         //--Constructor
-        LandBasedWheeled() : LandBasedWheeled("LandBasedWheeledRobot", 0, 0, 2, "round"){}
 
-        LandBasedWheeled(std::string name, int x, int y) : LandBasedWheeled(name, x, y, 2, "round"){}
-
-        LandBasedWheeled(std::string name, int x, int y, int w_number, std::string w_type) : LandBasedRobot(name, x , y), wheel_number{w_number}, wheel_type{nullptr}{
-            //auto* wheel_type = new std::string;
-            //*wheel_type = w_type;
+        LandBasedWheeled(std::string name="None", int x=0, int y=0, int w_number=2, std::string w_type="round") : LandBasedRobot(name, x , y), wheel_number{w_number}, wheel_type{nullptr}{
             std::shared_ptr<std::string> wheel_type {new std::string {w_type}};
         }
 

@@ -23,10 +23,8 @@ namespace rwa3 {
         virtual void set_y(int y)=0; //--set the y coordinate of a robot
 
         //--Constructor
-        //--no args
-        LandBasedRobot(): LandBasedRobot("none", 1, 1){}
-        //-- 3 parameter
-        LandBasedRobot(std::string name, int x, int y): name_{name}, x_{x}, y_{y}{
+        LandBasedRobot(std::string name="none", int x=0, int y=0): name_{name}, x_{x}, y_{y}{
+
         }
 
         //-- destructor

@@ -13,7 +13,7 @@ void FollowActionPath(std::shared_ptr<rwa3::LandBasedRobot> robot,
                       const std::vector<std::string> &vec, std::string obj){
     int x{robot->get_x()};//--should be 1 for wheeled and 2 for tracked
     int y{robot->get_y()};//--should be 4 for wheeled and 3 for tracked
-
+    
     for (auto s: vec){
         if (s.compare("up")==0)
             robot->GoUp(x,y);
@@ -34,7 +34,7 @@ int main(){
 //rwa3::LandBasedRobot base_robot("none",1,2);
 //--pointer to base class for dynamic binding
     std::cout <<"\n";
-    std::shared_ptr<rwa3::LandBasedRobot> wheeled = std::make_shared<rwa3::LandBasedWheeled>("husky", 1, 3);
+    std::shared_ptr<rwa3::LandBasedRobot> wheeled = std::make_shared<rwa3::LandBasedWheeled>("husky", 1, 4);
     std::vector<std::string> action_path_wheeled {"up","right","pickup","left","down", "release"};
     FollowActionPath(wheeled,action_path_wheeled,"book");
     std::cout << "--------------------------------------------------------------------\n";
