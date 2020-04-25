@@ -1,0 +1,3 @@
+/home/markose/CLionProjects/rwa3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/markose/CLionProjects/rwa3/cmake-build-debug/CMakeFiles/rwa3.dir
+/home/markose/CLionProjects/rwa3/cmake-build-debug/CMakeFiles/edit_cache.dir
