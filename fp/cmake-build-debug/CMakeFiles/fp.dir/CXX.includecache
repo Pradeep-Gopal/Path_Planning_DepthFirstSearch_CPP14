@@ -6,45 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/LandBasedRobot/landbasedrobot.cpp
+/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/Algorithm/algorithm.cpp
 iostream
 -
-landbasedrobot.h
-/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/LandBasedRobot/landbasedrobot.h
+algorithm.h
+/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/Algorithm/algorithm.h
 
-/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/LandBasedRobot/landbasedrobot.h
-string
+/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/Algorithm/algorithm.h
+array
 -
-
-/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/LandBasedTracked/landbasedtracked.cpp
-iostream
--
-landbasedtracked.h
-/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/LandBasedTracked/landbasedtracked.h
-
-/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/LandBasedTracked/landbasedtracked.h
-string
+stack
 -
 memory
 -
 ../LandBasedRobot/landbasedrobot.h
 /home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/LandBasedRobot/landbasedrobot.h
 
-/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/LandBasedWheeled/landbasedwheeled.cpp
-iostream
--
-landbasedwheeled.h
-/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/LandBasedWheeled/landbasedwheeled.h
-
-/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/LandBasedWheeled/landbasedwheeled.h
+/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/LandBasedRobot/landbasedrobot.h
 string
--
-memory
--
-../LandBasedRobot/landbasedrobot.h
-/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/LandBasedRobot/landbasedrobot.h
-../LandBasedRobot/landbasedrobot.h
-/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/LandBasedRobot/landbasedrobot.h
-iostream
 -
 

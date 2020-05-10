@@ -10,7 +10,6 @@
 namespace fp {
     class maze {
 
-
     public:
         // Attributes
         std::array<std::array<int, 16>, 16> maze_array;

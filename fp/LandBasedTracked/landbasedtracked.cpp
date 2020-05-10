@@ -7,18 +7,22 @@
 
 void fp::landbasedtracked::GoUp(int x, int y) {
     std::cout <<"landbasedtracked::GoUp is called\n";
+    y_ = y_ + 1;
 }
 
 void fp::landbasedtracked::GoDown(int x, int y) {
     std::cout <<"landbasedtracked::GoDown is called\n";
+    y_ = y_ - 1;
 }
 
 void fp::landbasedtracked::GoLeft(int x, int y) {
     std::cout <<"landbasedtracked::TurnLeft is called\n";
+    x_ = x_ - 1;
 }
 
 void fp::landbasedtracked::GoRight(int x, int y) {
     std::cout <<"landbasedtracked::TurnRight is called\n";
+    x_ = x_ + 1;
 }
 
 void fp::landbasedtracked::PickUp(std::string &pick) {

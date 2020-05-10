@@ -47,7 +47,7 @@ namespace fp {
 
 
 
-        landbasedwheeled(std::string name="None", int x=0, int y=0, double speed = 0, double width = 0, double length = 0, double height = 0, double capacity = 0, char directions = 'N', int w_number=2, std::string w_type="round") : landbasedrobot(name, x, y, speed, width, length, height, capacity, directions), wheel_number{w_number},wheel_type{nullptr} {
+        landbasedwheeled(std::string name="None", int x=0, int y=3, double speed = 0, double width = 0, double length = 0, double height = 0, double capacity = 0, char directions = 'N', int w_number=2, std::string w_type="round") : landbasedrobot(name, x, y, speed, width, length, height, capacity, directions), wheel_number{w_number},wheel_type{nullptr} {
             std::shared_ptr<std::string> wheel_type {new std::string {w_type}};
         }
 

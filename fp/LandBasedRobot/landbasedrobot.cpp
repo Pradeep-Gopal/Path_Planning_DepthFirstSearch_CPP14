@@ -7,18 +7,22 @@
 
 void fp::landbasedrobot::GoUp(int x, int y) {
     std::cout <<"landbasedrobot::GoUp is called\n" <<std::endl;
+    y_ = y_ + 1;
 }
 
 void fp::landbasedrobot::GoDown(int x, int y) {
     std::cout <<"landbasedrobot::GoDown is called\n" <<std::endl;
+    y_ = y_ - 1;
 }
 
 void fp::landbasedrobot::GoLeft(int x, int y) {
     std::cout <<"landbasedrobot::TurnLeft is called\n" <<std::endl;
+    x_ = x_ - 1;
 }
 
 void fp::landbasedrobot::GoRight(int x, int y) {
     std::cout <<"landbasedrobot::TurnRight is called\n" <<std::endl;
+    x_ = x_ + 1;
 }
 
 void fp::landbasedrobot::PickUp(std::string& pick) {
