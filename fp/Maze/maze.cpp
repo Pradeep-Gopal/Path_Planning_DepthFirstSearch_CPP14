@@ -19,6 +19,7 @@ bool fp::maze::check_walls(int x, int y) {
 std::array<std::array<int, 256>, 256> fp::maze::SetWall(int x, int y) {
     std::cout << "SetWall called";
     WallArray[x][y] = 1;
+    WallArray[y][x] = 1;
     return WallArray;
 }
 

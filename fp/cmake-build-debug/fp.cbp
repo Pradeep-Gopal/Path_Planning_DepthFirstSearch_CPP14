@@ -84,10 +84,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/prachu/Desktop/Robotics/fp/API/api.cpp">
+			<Option target="fp"/>
+		</Unit>
+		<Unit filename="/home/prachu/Desktop/Robotics/fp/API/api.h">
+			<Option target="fp"/>
+		</Unit>
 		<Unit filename="/home/prachu/Desktop/Robotics/fp/Algorithm/algorithm.cpp">
 			<Option target="fp"/>
 		</Unit>
 		<Unit filename="/home/prachu/Desktop/Robotics/fp/Algorithm/algorithm.h">
+			<Option target="fp"/>
+		</Unit>
+		<Unit filename="/home/prachu/Desktop/Robotics/fp/Direction/direction.h">
 			<Option target="fp"/>
 		</Unit>
 		<Unit filename="/home/prachu/Desktop/Robotics/fp/LandBasedRobot/landbasedrobot.cpp">

@@ -5,6 +5,19 @@
 #include <iostream>
 #include "algorithm.h"
 #include "../Maze/maze.h"
+#include "../API/api.h"
+#include "../Direction/direction.h"
+
+
+void fp::algorithm::log(const std::string& text)
+{
+    std::cerr << "\n" << text;
+}
+
+void fp::algorithm::displayNumber(const int num)
+{
+    std::cerr << num << std::endl;
+}
 
 void fp::algorithm::Clear_Visited_Nodes()
 {
@@ -67,19 +80,38 @@ void fp::algorithm::Solve(std::shared_ptr<fp::landbasedrobot> robot)
     std::cout << y <<std::endl;
     Print_Visited_Nodes();
 
+    // Creating an object from the Direction class
+    fp::Direction dirc;
+
+    // Setting the initial direction of the robot to North
+    dir = dirc.NORTH;
+
+    // Getting the width and height of the maze
+    width = fp::API::mazeWidth();
+    height = fp::API::mazeHeight();
+
+    // Current Robot coordinates
+    m = x;
+    n = y;
+
+    // Setting up the simulator with boundary information and start-goal information
+    SetUp();
+
+
     fp::maze maze;
-    maze.InitializeMaze();
-    const std::array<std::array<int, 256>, 256> &WallArray = maze.SetWall(15,31);
+
+    std::array<std::array<int, 256>, 256> WallArray =  maze.InitializeMaze();
+   // WallArray = maze.SetWall(0,1); //Insert code for setting walls
 
         // Move Down
-        while(!CheckGoal(x,y)) {
+        while(!CheckGoal(x,y)) {   //should we push the starting position to the stack?
             std::cout << " " ;
             std::cout << "\n";
             x = robot->get_x();
             y = robot->get_y();
 
             // Going Down
-            if ( y-1 >= 0 && (!VisitedNodes[x][y-1]) && (!WallArray[x][y-1])){
+            if ( y-1 >= 0 && (!VisitedNodes[x][y-1]) && (!WallArray[Set_Coordinates(x,y)][Set_Coordinates(x,y-1)])){
                 std::cout << "Going down" <<std::endl;
                 robot->GoDown(x, y);
                 x = robot->get_x();
@@ -90,8 +122,6 @@ void fp::algorithm::Solve(std::shared_ptr<fp::landbasedrobot> robot)
                 std::cout << y << std::endl;
                 VisitedNodes[x][y+1] = 1;
                 Print_Visited_Nodes();
-                x = robot->get_x();
-                y = robot->get_y();
                 std::cout << "pushed coordinates in stack = ";
                 std::cout <<x;
                 std::cout << ",";
@@ -105,8 +135,7 @@ void fp::algorithm::Solve(std::shared_ptr<fp::landbasedrobot> robot)
             }
 
             // Going Right
-
-            else if ((x+1 >= 0) && (x+1 < 16) && (!VisitedNodes[x+1][y]) && (!WallArray[x+1][y])){
+            else if ((x+1 >= 0) && (x+1 < 16) && (!VisitedNodes[x+1][y]) && (!WallArray[Set_Coordinates(x,y)][Set_Coordinates(x+1,y)])){
                 x = robot->get_x();
                 y = robot->get_y();
                 std::cout << "cannot go down, went right" << std::endl;
@@ -134,7 +163,6 @@ void fp::algorithm::Solve(std::shared_ptr<fp::landbasedrobot> robot)
             }
 
             // Going up
-
             else if ( y+1 < 16 && (!VisitedNodes[x][y+1]) && (!WallArray[Set_Coordinates(x,y)][Set_Coordinates(x,y+1)]) )
             {
                 x = robot->get_x();
@@ -164,7 +192,7 @@ void fp::algorithm::Solve(std::shared_ptr<fp::landbasedrobot> robot)
             }
 
             // Going Left
-            else if ((x-1 >= 0) && (!VisitedNodes[x-1][y]) && (!WallArray[x-1][y])){
+            else if ((x-1 >= 0) && (!VisitedNodes[x-1][y]) && (!WallArray[Set_Coordinates(x,y)][Set_Coordinates(x-1,y)])){
                 std::cout << "Moving Left" << std::endl;
                 x = robot->get_x();
                 y = robot->get_y();
@@ -219,8 +247,6 @@ void fp::algorithm::Solve(std::shared_ptr<fp::landbasedrobot> robot)
         Print_Visited_Nodes();
         break;
     }
-
-
 }
 
 std::array<int, 2> fp::algorithm::Get_Coordinates(int coordinates) {
@@ -240,6 +266,50 @@ bool fp::algorithm::CheckGoal(int x, int y)
 int fp::algorithm::Set_Coordinates(int x, int y) {
     int coordinate = (x) + 16*y;
     return coordinate;
+}
+
+void fp::algorithm::SetUp() {
+
+    // Printing on Simulator screen
+    fp::algorithm::log("running...");
+    fp::algorithm::log("Width is :");
+    fp::algorithm::displayNumber(width);
+    fp::algorithm::log("height is :");
+    fp::algorithm::displayNumber(height);
+
+    // Highlighting the Goal and Start coordinates in the simulator
+    fp::API::setColor(0,0,'G');
+    fp::API::setText(0, 0, "S");
+    fp::API::setColor(7,7,'Y');
+    fp::API::setText(7, 7, "G");
+    fp::API::setColor(8,8,'Y');
+    fp::API::setText(8, 8, "G");
+    fp::API::setColor(7,8,'Y');
+    fp::API::setText(7, 8, "G");
+    fp::API::setColor(8,7,'Y');
+    fp::API::setText(8, 7, "G");
+
+    // Highlighting the boundary walls in the simulator
+    for (int i = 0; i<width; i += 1){
+        for (int j = 0; j<height; j += 1){
+            if(i==0)
+            {
+                fp::API::setWall(i,j,'w');
+            }
+            if(j==0)
+            {
+                fp::API::setWall(i,j,'s');
+            }
+            if(i==width-1)
+            {
+                fp::API::setWall(i,j,'e');
+            }
+            if(j==width-1)
+            {
+                fp::API::setWall(i,j,'n');
+            }
+        }
+    }
 }
 
 

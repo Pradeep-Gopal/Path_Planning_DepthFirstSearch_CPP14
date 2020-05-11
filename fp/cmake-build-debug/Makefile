@@ -123,6 +123,33 @@ fp/fast:
 	$(MAKE) -f CMakeFiles/fp.dir/build.make CMakeFiles/fp.dir/build
 .PHONY : fp/fast
 
+API/api.o: API/api.cpp.o
+
+.PHONY : API/api.o
+
+# target to build an object file
+API/api.cpp.o:
+	$(MAKE) -f CMakeFiles/fp.dir/build.make CMakeFiles/fp.dir/API/api.cpp.o
+.PHONY : API/api.cpp.o
+
+API/api.i: API/api.cpp.i
+
+.PHONY : API/api.i
+
+# target to preprocess a source file
+API/api.cpp.i:
+	$(MAKE) -f CMakeFiles/fp.dir/build.make CMakeFiles/fp.dir/API/api.cpp.i
+.PHONY : API/api.cpp.i
+
+API/api.s: API/api.cpp.s
+
+.PHONY : API/api.s
+
+# target to generate assembly for a file
+API/api.cpp.s:
+	$(MAKE) -f CMakeFiles/fp.dir/build.make CMakeFiles/fp.dir/API/api.cpp.s
+.PHONY : API/api.cpp.s
+
 Algorithm/algorithm.o: Algorithm/algorithm.cpp.o
 
 .PHONY : Algorithm/algorithm.o
@@ -294,6 +321,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... fp"
+	@echo "... API/api.o"
+	@echo "... API/api.i"
+	@echo "... API/api.s"
 	@echo "... Algorithm/algorithm.o"
 	@echo "... Algorithm/algorithm.i"
 	@echo "... Algorithm/algorithm.s"
