@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/clion-2020.1.1/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/112/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /opt/clion-2020.1.1/bin/cmake/linux/bin/cmake -E remove -f
+RM = /snap/clion/112/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp
+CMAKE_SOURCE_DIR = /home/rohit/Path_Planning_DepthFirstSearch_CPP14/fp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/cmake-build-debug
+CMAKE_BINARY_DIR = /home/rohit/Path_Planning_DepthFirstSearch_CPP14/fp/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/opt/clion-2020.1.1/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/112/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/opt/clion-2020.1.1/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/112/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/cmake-build-debug/CMakeFiles /home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rohit/Path_Planning_DepthFirstSearch_CPP14/fp/cmake-build-debug/CMakeFiles /home/rohit/Path_Planning_DepthFirstSearch_CPP14/fp/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rohit/Path_Planning_DepthFirstSearch_CPP14/fp/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -258,6 +258,33 @@ Maze/maze.cpp.s:
 	$(MAKE) -f CMakeFiles/fp.dir/build.make CMakeFiles/fp.dir/Maze/maze.cpp.s
 .PHONY : Maze/maze.cpp.s
 
+api/api.o: api/api.cpp.o
+
+.PHONY : api/api.o
+
+# target to build an object file
+api/api.cpp.o:
+	$(MAKE) -f CMakeFiles/fp.dir/build.make CMakeFiles/fp.dir/api/api.cpp.o
+.PHONY : api/api.cpp.o
+
+api/api.i: api/api.cpp.i
+
+.PHONY : api/api.i
+
+# target to preprocess a source file
+api/api.cpp.i:
+	$(MAKE) -f CMakeFiles/fp.dir/build.make CMakeFiles/fp.dir/api/api.cpp.i
+.PHONY : api/api.cpp.i
+
+api/api.s: api/api.cpp.s
+
+.PHONY : api/api.s
+
+# target to generate assembly for a file
+api/api.cpp.s:
+	$(MAKE) -f CMakeFiles/fp.dir/build.make CMakeFiles/fp.dir/api/api.cpp.s
+.PHONY : api/api.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -309,6 +336,9 @@ help:
 	@echo "... Maze/maze.o"
 	@echo "... Maze/maze.i"
 	@echo "... Maze/maze.s"
+	@echo "... api/api.o"
+	@echo "... api/api.i"
+	@echo "... api/api.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
