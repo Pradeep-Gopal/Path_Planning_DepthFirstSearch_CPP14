@@ -15,6 +15,24 @@ bool fp::maze::check_walls(int x, int y) {
     return false;
 }
 
-void fp::maze::set_wall(int x, int y) {
-    std::cout<< "set walls called" << std::endl;
+
+std::array<std::array<int, 256>, 256> fp::maze::SetWall(int x, int y) {
+    std::cout << "SetWall called";
+    WallArray[x][y] = 1;
+    return WallArray;
 }
+
+std::array<std::array<int, 256>, 256> fp::maze::InitializeMaze() {
+    std::cout << "Initialised wall array with all zeroes" <<std::endl;
+    for (int i = 0; i < 255; i++)
+    {
+        for (int j = 0; j < 255; j++)
+        {
+            WallArray[i][j] = 0;
+        }
+    }
+
+    return WallArray;
+}
+
+

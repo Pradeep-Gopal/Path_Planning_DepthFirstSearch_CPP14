@@ -1,4 +1,4 @@
-# Install script for directory: /home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp
+# Install script for directory: /home/prachu/Desktop/Robotics/fp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/prachu/Desktop/Robotics/fp/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

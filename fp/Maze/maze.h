@@ -12,14 +12,17 @@ namespace fp {
 
     public:
         // Attributes
-        std::array<std::array<int, 16>, 16> maze_array;
+        std::array<std::array<int, 256>, 256> WallArray;
 
         //Method prototypes
+        std::array<std::array<int, 256>, 256> InitializeMaze();
+
+        std::array<std::array<int, 256>, 256> SetWall(int x, int y);
+
         int get_dimension() const;
 
         bool check_walls(int x, int y);
 
-        void set_wall(int x, int y);
     };
 }
 

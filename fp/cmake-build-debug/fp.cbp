@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/cmake-build-debug"/>
+				<Option working_dir="/home/prachu/Desktop/Robotics/fp/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/cmake-build-debug"/>
+				<Option working_dir="/home/prachu/Desktop/Robotics/fp/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/cmake-build-debug"/>
+				<Option working_dir="/home/prachu/Desktop/Robotics/fp/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="fp">
-				<Option output="/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/cmake-build-debug/fp" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/cmake-build-debug"/>
+				<Option output="/home/prachu/Desktop/Robotics/fp/cmake-build-debug/fp" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/prachu/Desktop/Robotics/fp/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -54,15 +54,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 fp"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 fp"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="fp/fast">
-				<Option output="/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/cmake-build-debug/fp" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/cmake-build-debug"/>
+				<Option output="/home/prachu/Desktop/Robotics/fp/cmake-build-debug/fp" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/prachu/Desktop/Robotics/fp/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -77,47 +77,47 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 fp/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 fp/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/prachu/Desktop/Robotics/fp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/Algorithm/algorithm.cpp">
+		<Unit filename="/home/prachu/Desktop/Robotics/fp/Algorithm/algorithm.cpp">
 			<Option target="fp"/>
 		</Unit>
-		<Unit filename="/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/Algorithm/algorithm.h">
+		<Unit filename="/home/prachu/Desktop/Robotics/fp/Algorithm/algorithm.h">
 			<Option target="fp"/>
 		</Unit>
-		<Unit filename="/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/LandBasedRobot/landbasedrobot.cpp">
+		<Unit filename="/home/prachu/Desktop/Robotics/fp/LandBasedRobot/landbasedrobot.cpp">
 			<Option target="fp"/>
 		</Unit>
-		<Unit filename="/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/LandBasedRobot/landbasedrobot.h">
+		<Unit filename="/home/prachu/Desktop/Robotics/fp/LandBasedRobot/landbasedrobot.h">
 			<Option target="fp"/>
 		</Unit>
-		<Unit filename="/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/LandBasedTracked/landbasedtracked.cpp">
+		<Unit filename="/home/prachu/Desktop/Robotics/fp/LandBasedTracked/landbasedtracked.cpp">
 			<Option target="fp"/>
 		</Unit>
-		<Unit filename="/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/LandBasedTracked/landbasedtracked.h">
+		<Unit filename="/home/prachu/Desktop/Robotics/fp/LandBasedTracked/landbasedtracked.h">
 			<Option target="fp"/>
 		</Unit>
-		<Unit filename="/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/LandBasedWheeled/landbasedwheeled.cpp">
+		<Unit filename="/home/prachu/Desktop/Robotics/fp/LandBasedWheeled/landbasedwheeled.cpp">
 			<Option target="fp"/>
 		</Unit>
-		<Unit filename="/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/LandBasedWheeled/landbasedwheeled.h">
+		<Unit filename="/home/prachu/Desktop/Robotics/fp/LandBasedWheeled/landbasedwheeled.h">
 			<Option target="fp"/>
 		</Unit>
-		<Unit filename="/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/Maze/maze.cpp">
+		<Unit filename="/home/prachu/Desktop/Robotics/fp/Maze/maze.cpp">
 			<Option target="fp"/>
 		</Unit>
-		<Unit filename="/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/Maze/maze.h">
+		<Unit filename="/home/prachu/Desktop/Robotics/fp/Maze/maze.h">
 			<Option target="fp"/>
 		</Unit>
-		<Unit filename="/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/main.cpp">
+		<Unit filename="/home/prachu/Desktop/Robotics/fp/main.cpp">
 			<Option target="fp"/>
 		</Unit>
-		<Unit filename="/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/CMakeLists.txt">
+		<Unit filename="/home/prachu/Desktop/Robotics/fp/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

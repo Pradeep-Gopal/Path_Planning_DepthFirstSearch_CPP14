@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include "algorithm.h"
+#include "../Maze/maze.h"
 
 void fp::algorithm::Clear_Visited_Nodes()
 {
@@ -64,16 +65,21 @@ void fp::algorithm::Solve(std::shared_ptr<fp::landbasedrobot> robot)
     std::cout << x;
     std::cout << ",";
     std::cout << y <<std::endl;
-
     Print_Visited_Nodes();
+
+    fp::maze maze;
+    maze.InitializeMaze();
+    const std::array<std::array<int, 256>, 256> &WallArray = maze.SetWall(15,31);
 
         // Move Down
         while(!CheckGoal(x,y)) {
-            std::cout << "" ;
+            std::cout << " " ;
             std::cout << "\n";
             x = robot->get_x();
             y = robot->get_y();
-            if ( y-1 >= 0 && (!VisitedNodes[x][y-1]) ){
+
+            // Going Down
+            if ( y-1 >= 0 && (!VisitedNodes[x][y-1]) && (!WallArray[x][y-1])){
                 std::cout << "Going down" <<std::endl;
                 robot->GoDown(x, y);
                 x = robot->get_x();
@@ -86,23 +92,23 @@ void fp::algorithm::Solve(std::shared_ptr<fp::landbasedrobot> robot)
                 Print_Visited_Nodes();
                 x = robot->get_x();
                 y = robot->get_y();
+                std::cout << "pushed coordinates in stack = ";
                 std::cout <<x;
+                std::cout << ",";
                 std::cout <<y <<std::endl;
-                std::cout << "pushed in stack while performing down" <<std::endl;
+                std::cout << "Final value pushed in stack = ";
                 std::cout << Set_Coordinates(x,y) << std::endl;
                 Stack.push(Set_Coordinates(x,y));
+                std::cout << "Printing Stack" <<std::endl;
+                PrintStack(Stack);
+                std::cout << "\n";
             }
 
+            // Going Right
 
-            // Going out of bounds or if a wall is encountered when moving down
-
-            else if ((x+1 >= 0) && (x+1 < 16) && (!VisitedNodes[x+1][y])){
+            else if ((x+1 >= 0) && (x+1 < 16) && (!VisitedNodes[x+1][y]) && (!WallArray[x+1][y])){
                 x = robot->get_x();
                 y = robot->get_y();
-
-                std::cout << x;
-                std::cout <<",";
-                std::cout << y << std::endl;
                 std::cout << "cannot go down, went right" << std::endl;
                 robot->GoRight(x, y);
                 x = robot->get_x();
@@ -115,21 +121,24 @@ void fp::algorithm::Solve(std::shared_ptr<fp::landbasedrobot> robot)
                 Print_Visited_Nodes();
                 x = robot->get_x();
                 y = robot->get_y();
+                std::cout << "pushed coordinates in stack = ";
                 std::cout <<x;
+                std::cout << ",";
                 std::cout <<y <<std::endl;
-                std::cout << "pushed in stack while performing right" <<std::endl;
+                std::cout << "Final value pushed in stack = ";
                 std::cout << Set_Coordinates(x,y) << std::endl;
                 Stack.push(Set_Coordinates(x,y));
+                std::cout << "Printing Stack" <<std::endl;
+                PrintStack(Stack);
+                std::cout << "\n";
             }
 
-            else if ( y+1 < 16 && (!VisitedNodes[x][y+1]) )
+            // Going up
+
+            else if ( y+1 < 16 && (!VisitedNodes[x][y+1]) && (!WallArray[Set_Coordinates(x,y)][Set_Coordinates(x,y+1)]) )
             {
-                std::cout << " X == 15" << std::endl;
                 x = robot->get_x();
                 y = robot->get_y();
-                std::cout << x;
-                std::cout <<",";
-                std::cout << y << std::endl;
                 std::cout << "cannot go down, right, went up" << std::endl;
                 robot->GoUp(x, y);
                 x = robot->get_x();
@@ -142,22 +151,23 @@ void fp::algorithm::Solve(std::shared_ptr<fp::landbasedrobot> robot)
                 Print_Visited_Nodes();
                 x = robot->get_x();
                 y = robot->get_y();
+                std::cout << "pushed coordinates in stack = ";
                 std::cout <<x;
+                std::cout << ",";
                 std::cout <<y <<std::endl;
-                std::cout << "pushed in stack while performing up" <<std::endl;
+                std::cout << "Final value pushed in stack = ";
                 std::cout << Set_Coordinates(x,y) << std::endl;
                 Stack.push(Set_Coordinates(x,y));
+                std::cout << "Printing Stack" <<std::endl;
+                PrintStack(Stack);
+                std::cout << "\n";
             }
 
-            else if ((x-1 >= 0) && (!VisitedNodes[x-1][y])){
+            // Going Left
+            else if ((x-1 >= 0) && (!VisitedNodes[x-1][y]) && (!WallArray[x-1][y])){
                 std::cout << "Moving Left" << std::endl;
-
                 x = robot->get_x();
                 y = robot->get_y();
-
-                std::cout << x;
-                std::cout <<",";
-                std::cout << y << std::endl;
                 std::cout << "cannot go down, left, up, right, went left" << std::endl;
                 robot->GoLeft(x, y);
                 x = robot->get_x();
@@ -170,25 +180,41 @@ void fp::algorithm::Solve(std::shared_ptr<fp::landbasedrobot> robot)
                 Print_Visited_Nodes();
                 x = robot->get_x();
                 y = robot->get_y();
+                std::cout << "pushed coordinates in stack = ";
                 std::cout <<x;
+                std::cout << ",";
                 std::cout <<y <<std::endl;
-                std::cout << "pushed in stack while performing right" <<std::endl;
+                std::cout << "Final value pushed in stack = ";
                 std::cout << Set_Coordinates(x,y) << std::endl;
                 Stack.push(Set_Coordinates(x,y));
+                std::cout << "Printing Stack" <<std::endl;
+                PrintStack(Stack);
+                std::cout << "\n";
             }
 
+            else{
+                std::cout << "Popping off from stack" <<std::endl;
+                int NewCoordinate = Stack.top();
+                std::array<int, 2> point = Get_Coordinates(NewCoordinate);
+                VisitedNodes[point[0]][point[1]] = 1;
+                Stack.pop();
+                NewCoordinate = Stack.top();
+                std::cout << "New Robot Location after popping" << std::endl;
+                point = Get_Coordinates(NewCoordinate);
+                std::cout << "x = " <<point[0] <<std::endl;
+                std::cout << "y = " << point[1] <<std::endl;
+                robot->set_x(point[0]);
+                robot->set_y(point[1]);
+                std::cout << "\n";
+            }
         }
 
-
-
-
     PrintStack(Stack);
-
+    std::cout << "\n" ;
     while(CheckGoal(x,y)){
         x = robot->get_x();
         y = robot->get_y();
-        std::cout << x;
-        std::cout << y << std::endl;
+        std::cout << "current robot coordinate at goal "<<x <<"," <<y <<std::endl;
         std::cout << "Goal Reached" <<std::endl;
         Print_Visited_Nodes();
         break;
@@ -199,8 +225,8 @@ void fp::algorithm::Solve(std::shared_ptr<fp::landbasedrobot> robot)
 
 std::array<int, 2> fp::algorithm::Get_Coordinates(int coordinates) {
     std::array <int,2> coordinate;
-    coordinate[0] = coordinates/16;
-    coordinate[1] = coordinates%16;
+    coordinate[1] = coordinates/16;
+    coordinate[0] = coordinates%16;
     return coordinate;
 }
 

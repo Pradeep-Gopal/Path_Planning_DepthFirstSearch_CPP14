@@ -11,7 +11,6 @@ int main(){
     std::shared_ptr<fp::landbasedrobot> wheeled = std::make_shared<fp::landbasedwheeled>("Husky");
     fp::algorithm algo;
     algo.Clear_Visited_Nodes();
-    //algo.Print_Visited_Nodes();
     algo.Solve(wheeled);
 
 //    std::array<int, 2> p = algo.Get_Coordinates(119);

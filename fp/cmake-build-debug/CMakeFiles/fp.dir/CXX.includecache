@@ -6,13 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/Algorithm/algorithm.cpp
+/home/prachu/Desktop/Robotics/fp/Algorithm/algorithm.cpp
 iostream
 -
 algorithm.h
-/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/Algorithm/algorithm.h
+/home/prachu/Desktop/Robotics/fp/Algorithm/algorithm.h
+../Maze/maze.h
+/home/prachu/Desktop/Robotics/fp/Maze/maze.h
 
-/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/Algorithm/algorithm.h
+/home/prachu/Desktop/Robotics/fp/Algorithm/algorithm.h
 array
 -
 stack
@@ -20,9 +22,13 @@ stack
 memory
 -
 ../LandBasedRobot/landbasedrobot.h
-/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/LandBasedRobot/landbasedrobot.h
+/home/prachu/Desktop/Robotics/fp/LandBasedRobot/landbasedrobot.h
 
-/home/prachu/Desktop/Robotics/Path_Planning_DepthFirstSearch_CPP14/fp/LandBasedRobot/landbasedrobot.h
+/home/prachu/Desktop/Robotics/fp/LandBasedRobot/landbasedrobot.h
 string
+-
+
+/home/prachu/Desktop/Robotics/fp/Maze/maze.h
+array
 -
 

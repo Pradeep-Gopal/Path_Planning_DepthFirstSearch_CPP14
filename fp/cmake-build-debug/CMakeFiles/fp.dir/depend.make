@@ -4,6 +4,7 @@
 CMakeFiles/fp.dir/Algorithm/algorithm.cpp.o: ../Algorithm/algorithm.cpp
 CMakeFiles/fp.dir/Algorithm/algorithm.cpp.o: ../Algorithm/algorithm.h
 CMakeFiles/fp.dir/Algorithm/algorithm.cpp.o: ../LandBasedRobot/landbasedrobot.h
+CMakeFiles/fp.dir/Algorithm/algorithm.cpp.o: ../Maze/maze.h
 
 CMakeFiles/fp.dir/LandBasedRobot/landbasedrobot.cpp.o: ../LandBasedRobot/landbasedrobot.cpp
 CMakeFiles/fp.dir/LandBasedRobot/landbasedrobot.cpp.o: ../LandBasedRobot/landbasedrobot.h
