@@ -11,10 +11,10 @@ namespace fp {
 
     public:
         //--method prototypes
-        virtual void GoUp(int x_, int y_)=0;  //Move the robot up in the maze
-        virtual void GoDown(int x_, int y_)=0;  //Move the robot down in the maze
-        virtual void GoLeft(int x_, int y_)=0;  //Move the robot left in the maze
-        virtual void GoRight(int x_, int y_)=0;  //Move the robot right in the maze
+        virtual void GoUp(int &x_, int &y_)=0;  //Move the robot up in the maze
+        virtual void GoDown(int &x_, int &y_)=0;  //Move the robot down in the maze
+        virtual void GoLeft(int &x_, int &y_)=0;  //Move the robot left in the maze
+        virtual void GoRight(int &x_, int &y_)=0;  //Move the robot right in the maze
         virtual void PickUp(std::string& pick)=0;  //Arm picks up an object
         virtual void Release(std::string& release)=0;  //Arm releases an object.
         virtual int get_x() const=0;//--get the x coordinate of a robot

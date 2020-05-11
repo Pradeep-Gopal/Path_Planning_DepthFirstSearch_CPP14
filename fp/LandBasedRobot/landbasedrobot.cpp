@@ -5,19 +5,19 @@
 #include <iostream>
 #include "landbasedrobot.h"
 
-void fp::landbasedrobot::GoUp(int x, int y) {
+void fp::landbasedrobot::GoUp(int &x_, int &y_) {
     std::cout <<"landbasedrobot::GoUp is called\n" <<std::endl;
 }
 
-void fp::landbasedrobot::GoDown(int x, int y) {
+void fp::landbasedrobot::GoDown(int &x_, int &y_) {
     std::cout <<"landbasedrobot::GoDown is called\n" <<std::endl;
 }
 
-void fp::landbasedrobot::GoLeft(int x, int y) {
+void fp::landbasedrobot::GoLeft(int &x_, int &y_) {
     std::cout <<"landbasedrobot::TurnLeft is called\n" <<std::endl;
 }
 
-void fp::landbasedrobot::GoRight(int x, int y) {
+void fp::landbasedrobot::GoRight(int &x_, int &y_) {
     std::cout <<"landbasedrobot::TurnRight is called\n" <<std::endl;
 }
 

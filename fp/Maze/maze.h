@@ -3,9 +3,9 @@
 //
 
 #pragma once
-
-
 #include <array>
+#include "../LandBasedTracked/landbasedtracked.h"
+#include "../LandBasedRobot/landbasedrobot.h"
 
 namespace fp {
     class maze {
@@ -16,12 +16,10 @@ namespace fp {
         std::array<std::array<int, 16>, 16> maze_array;
 
         //Method prototypes
-        int get_dimension() const;
-
+        void update_maze();
+        int find_pos(landbasedtracked robot);
+        void move_in_maze(landbasedtracked robot);
         bool check_walls(int x, int y);
-
         void set_wall(int x, int y);
     };
 }
-
-

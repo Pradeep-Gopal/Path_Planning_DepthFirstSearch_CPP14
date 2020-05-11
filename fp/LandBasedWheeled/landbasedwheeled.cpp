@@ -5,19 +5,19 @@
 #include <iostream>
 #include "landbasedwheeled.h"
 
-void fp::landbasedwheeled::GoUp(int x, int y) {
+void fp::landbasedwheeled::GoUp(int &x_, int &y_) {
     std::cout <<"landbasedwheeled::GoUp is called\n";
 }
 
-void fp::landbasedwheeled::GoDown(int x, int y) {
+void fp::landbasedwheeled::GoDown(int &x_, int &y_) {
     std::cout <<"landbasedwheeled::GoDown is called\n";
 }
 
-void fp::landbasedwheeled::GoLeft(int x, int y) {
+void fp::landbasedwheeled::GoLeft(int &x_, int &y_) {
     std::cout <<"landbasedwheeled::TurnLeft is called\n";
 }
 
-void fp::landbasedwheeled::GoRight(int x, int y) {
+void fp::landbasedwheeled::GoRight(int &x_, int &y_) {
     std::cout <<"landbasedwheeled::TurnRight is called\n";
 }
 

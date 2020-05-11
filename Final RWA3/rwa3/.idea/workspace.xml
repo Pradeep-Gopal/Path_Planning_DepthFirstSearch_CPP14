@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
       <config projectName="rwa3" targetName="rwa3" />
@@ -11,7 +29,81 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4387ad-518b-497c-90c3-a18b6ac93ff6" name="Default Changelist" comment="" />
+    <list default="true" id="ba4387ad-518b-497c-90c3-a18b6ac93ff6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/Path_Planning_DepthFirstSearch_CPP14.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rwa3.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rwa3.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rwa3.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rwa3.dir/LandBasedRobot/landbasedrobot.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rwa3.dir/LandBasedTracked/landbasedtracked.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rwa3.dir/LandBasedWheeled/landbasedwheeled.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rwa3.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rwa3.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rwa3.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rwa3.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rwa3.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rwa3.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rwa3.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rwa3.dir/main.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/rwa3.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rwa3.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/LandBasedTracked/landbasedtracked.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../fp/LandBasedTracked/landbasedtracked.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/LandBasedTracked/landbasedtracked.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../fp/LandBasedTracked/landbasedtracked.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/Maze/maze.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../fp/Maze/maze.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/Maze/maze.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../fp/Maze/maze.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/fp.dir/Algorithm/algorithm.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/fp.dir/Algorithm/algorithm.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/fp.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/fp.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/fp.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/fp.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/fp.dir/LandBasedRobot/landbasedrobot.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/fp.dir/LandBasedRobot/landbasedrobot.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/fp.dir/LandBasedTracked/landbasedtracked.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/fp.dir/LandBasedTracked/landbasedtracked.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/fp.dir/LandBasedWheeled/landbasedwheeled.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/fp.dir/LandBasedWheeled/landbasedwheeled.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/fp.dir/Maze/maze.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/fp.dir/Maze/maze.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/fp.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/fp.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/fp.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/fp.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/fp.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/fp.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/fp.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/fp.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/rwa3.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/rwa3.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/rwa3.dir/LandBasedRobot/LandBasedRobot.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/rwa3.dir/LandBasedTracked/LandBasedTracked.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/rwa3.dir/LandBasedWheeled/LandBasedWheeled.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/rwa3.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/rwa3.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/rwa3.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/rwa3.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/rwa3.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/rwa3.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/rwa3.dir/main.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/cmake-build-debug/CMakeFiles/rwa3.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../fp/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../fp/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/cmake-build-debug/fp" beforeDir="false" afterPath="$PROJECT_DIR$/../../fp/cmake-build-debug/fp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/cmake-build-debug/fp.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../../fp/cmake-build-debug/fp.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fp/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../fp/main.cpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,18 +113,31 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="ProjectId" id="1b2r8yrRFwV1MYZi1M5AsEYwosn" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RunManager">
-    <configuration name="rwa3" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="rwa3" TARGET_NAME="rwa3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="rwa3" RUN_TARGET_NAME="rwa3">
+    <configuration name="rwa3" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="rwa3" TARGET_NAME="rwa3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="rwa3" RUN_TARGET_NAME="rwa3">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -49,11 +154,25 @@
       <option name="presentableId" value="Default" />
       <updated>1587840874043</updated>
       <workItem from="1587840876297" duration="9786000" />
+      <workItem from="1589059589965" duration="1320000" />
+      <workItem from="1589137606046" duration="38000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="588" y="214" width="800" height="677" key="#New_File_Extensions" timestamp="1587840969378">

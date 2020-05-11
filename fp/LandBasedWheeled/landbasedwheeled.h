@@ -15,10 +15,10 @@ namespace fp {
     class landbasedwheeled : public landbasedrobot {
     public:
         //--method prototypes
-        virtual void GoUp(int x_, int y_) override;  //Move the robot up in the maze
-        virtual void GoDown(int x_, int y_) override;  //Move the robot down in the maze
-        virtual void GoLeft(int x_, int y_) override;  //Move the robot left in the maze
-        virtual void GoRight(int x_, int y_) override;  //Move the robot right in the maze
+        virtual void GoUp(int &x_, int &y_) override;  //Move the robot up in the maze
+        virtual void GoDown(int &x_, int &y_) override;  //Move the robot down in the maze
+        virtual void GoLeft(int &x_, int &y_) override;  //Move the robot left in the maze
+        virtual void GoRight(int &x_, int &y_) override;  //Move the robot right in the maze
         virtual void PickUp(std::string& pick) override;  //Arm picks up an object
         virtual void Release(std::string& release) override;  //Arm releases an object
         virtual int get_x() const override;//--get the x coordinate of a robot

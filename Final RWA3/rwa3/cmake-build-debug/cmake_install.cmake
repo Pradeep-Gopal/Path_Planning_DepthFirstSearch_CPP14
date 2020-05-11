@@ -1,4 +1,4 @@
-# Install script for directory: /home/markose/CLionProjects/rwa3
+# Install script for directory: /home/srikumar/Path_Planning_DepthFirstSearch_CPP14/Final RWA3/rwa3
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/markose/CLionProjects/rwa3/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/srikumar/Path_Planning_DepthFirstSearch_CPP14/Final RWA3/rwa3/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
