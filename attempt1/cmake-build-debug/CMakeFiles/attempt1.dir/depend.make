@@ -7,6 +7,7 @@ CMakeFiles/attempt1.dir/API/api.cpp.o: ../API/api.h
 CMakeFiles/attempt1.dir/Algorithm/algorithm.cpp.o: ../API/api.h
 CMakeFiles/attempt1.dir/Algorithm/algorithm.cpp.o: ../Algorithm/algorithm.cpp
 CMakeFiles/attempt1.dir/Algorithm/algorithm.cpp.o: ../Algorithm/algorithm.h
+CMakeFiles/attempt1.dir/Algorithm/algorithm.cpp.o: ../Direction/direction.h
 
 CMakeFiles/attempt1.dir/Maze/maze.cpp.o: ../Maze/maze.cpp
 CMakeFiles/attempt1.dir/Maze/maze.cpp.o: ../Maze/maze.h

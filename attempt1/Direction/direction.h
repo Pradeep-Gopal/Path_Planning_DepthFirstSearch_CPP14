@@ -4,9 +4,9 @@
 
 struct Direction {
 
-    char NORTH = 'N';
-    char EAST  = 'E';
-    char SOUTH = 'S';
-    char WEST  = 'W';
+    char NORTH = 'n';
+    char EAST  = 'e';
+    char SOUTH = 's';
+    char WEST  = 'w';
 
 };

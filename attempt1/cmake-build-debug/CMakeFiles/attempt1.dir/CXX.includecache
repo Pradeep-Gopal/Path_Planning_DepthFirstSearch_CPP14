@@ -17,8 +17,14 @@ iostream
 -
 ../API/api.h
 /home/markose/CLionProjects/attempt1/API/api.h
+../Direction/direction.h
+/home/markose/CLionProjects/attempt1/Direction/direction.h
 
 /home/markose/CLionProjects/attempt1/Algorithm/algorithm.h
+string
+-
+
+/home/markose/CLionProjects/attempt1/Direction/direction.h
 string
 -
 

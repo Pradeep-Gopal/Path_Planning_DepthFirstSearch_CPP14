@@ -5,6 +5,7 @@
 #include "algorithm.h"
 #include <iostream>
 #include "../API/api.h"
+#include "../Direction/direction.h"
 
 void fp::algorithm::log(const std::string& text)
 {
@@ -18,9 +19,15 @@ void fp::algorithm::displayNumber(const int num)
 
 void fp::algorithm::solve()
 {
+    Direction dirc;
+
+//    char dir;
+    // how to set direction
+    dir = dirc.NORTH;
+//    dir = dirc.SOUTH;
     width = fp::API::mazeWidth();
     height = fp::API::mazeHeight();
-    dir = 'n';
+//    dir = 'n';
     direc = 'w';
     m = 0;
     n = 0;
@@ -58,75 +65,75 @@ void fp::algorithm::solve()
     while (true) {
         if (!fp::API::wallLeft()) {
             fp::API::turnLeft();
-            if(dir=='n')
+            if(dir==dirc.NORTH)
             {
-                dir='w';
+                dir=dirc.WEST;
             }
-            else if (dir=='w')
+            else if (dir==dirc.WEST)
             {
-                dir='s';
+                dir=dirc.SOUTH;
             }
-            else if(dir=='s')
+            else if(dir==dirc.SOUTH)
             {
-                dir='e';
+                dir=dirc.EAST;
             }
-            else if(dir=='e')
+            else if(dir==dirc.EAST)
             {
-                dir='n';
+                dir=dirc.NORTH;
             }
 
         }
         while (fp::API::wallFront()) {
             fp::API::turnRight();
-            if(dir=='n')
+            if(dir==dirc.NORTH)
             {
-                dir='e';
+                dir=dirc.EAST;
             }
-            else if(dir=='w')
+            else if(dir==dirc.WEST)
             {
-                dir='n';
+                dir=dirc.NORTH;
             }
-            else if(dir=='s')
+            else if(dir==dirc.SOUTH)
             {
-                dir='w';
+                dir=dirc.WEST;
             }
-            else if(dir=='e')
+            else if(dir==dirc.EAST)
             {
-                dir='s';
+                dir=dirc.SOUTH;
             }
         }
         fp::API::moveForward();
-        if(dir=='n')
+        if(dir==dirc.NORTH)
         {
             n = n + 1;
         }
-        else if(dir=='e')
+        else if(dir==dirc.EAST)
         {
             m = m + 1;
         }
-        else if(dir=='s')
+        else if(dir==dirc.SOUTH)
         {
             n = n - 1;
         }
-        else if(dir=='w')
+        else if(dir==dirc.WEST)
         {
             m = m - 1;
         }
         if(fp::API::wallLeft())
         {
-            if(dir=='n')
+            if(dir==dirc.NORTH)
             {
                 direc='w';
             }
-            else if(dir=='w')
+            else if(dir==dirc.WEST)
             {
                 direc='s';
             }
-            else if(dir=='s')
+            else if(dir==dirc.SOUTH)
             {
                 direc='e';
             }
-            else if(dir=='e')
+            else if(dir==dirc.EAST)
             {
                 direc='n';
             }
@@ -135,19 +142,19 @@ void fp::algorithm::solve()
         }
         if(fp::API::wallRight())
         {
-            if(dir=='n')
+            if(dir==dirc.NORTH)
             {
                 direc='e';
             }
-            else if(dir=='w')
+            else if(dir==dirc.WEST)
             {
                 direc='n';
             }
-            else if(dir=='s')
+            else if(dir==dirc.SOUTH)
             {
                 direc='w';
             }
-            else if(dir=='e')
+            else if(dir==dirc.EAST)
             {
                 direc='s';
             }
