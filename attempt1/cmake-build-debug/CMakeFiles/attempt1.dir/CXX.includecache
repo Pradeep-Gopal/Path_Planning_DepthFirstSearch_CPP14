@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/markose/CLionProjects/attempt1/API/api.h
+string
+-
+
+/home/markose/CLionProjects/attempt1/Algorithm/algorithm.cpp
+algorithm.h
+/home/markose/CLionProjects/attempt1/Algorithm/algorithm.h
+iostream
+-
+../API/api.h
+/home/markose/CLionProjects/attempt1/API/api.h
+
+/home/markose/CLionProjects/attempt1/Algorithm/algorithm.h
+string
+-
+

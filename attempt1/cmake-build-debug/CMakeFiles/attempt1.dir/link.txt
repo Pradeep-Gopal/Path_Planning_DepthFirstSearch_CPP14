@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/attempt1.dir/main.cpp.o CMakeFiles/attempt1.dir/Algorithm/algorithm.cpp.o CMakeFiles/attempt1.dir/API/api.cpp.o CMakeFiles/attempt1.dir/Maze/maze.cpp.o  -o attempt1 

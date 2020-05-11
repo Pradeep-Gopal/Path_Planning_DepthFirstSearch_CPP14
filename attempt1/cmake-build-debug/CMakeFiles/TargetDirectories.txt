@@ -1,0 +1,3 @@
+/home/markose/CLionProjects/attempt1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/markose/CLionProjects/attempt1/cmake-build-debug/CMakeFiles/attempt1.dir
+/home/markose/CLionProjects/attempt1/cmake-build-debug/CMakeFiles/edit_cache.dir
