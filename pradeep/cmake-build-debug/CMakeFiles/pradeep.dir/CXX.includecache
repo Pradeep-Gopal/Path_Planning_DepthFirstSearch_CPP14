@@ -33,6 +33,8 @@ memory
 /home/prachu/Desktop/Robotics/pradeep/LandBasedRobot/landbasedrobot.h
 ../Maze/maze.h
 /home/prachu/Desktop/Robotics/pradeep/Maze/maze.h
+../Direction/direction.h
+/home/prachu/Desktop/Robotics/pradeep/Direction/direction.h
 
 /home/prachu/Desktop/Robotics/pradeep/Direction/direction.h
 string

@@ -7,9 +7,15 @@
 #include "../Maze/maze.h"
 #include "../API/api.h"
 #include "../Direction/direction.h"
-
+fp::Direction dirc;
+//char dir = dirc.NORTH;
 
 void fp::algorithm::log(const std::string& text)
+{
+    std::cerr << "\n" << text;
+}
+
+void fp::algorithm::Boollog(const bool& text)
 {
     std::cerr << "\n" << text;
 }
@@ -203,6 +209,7 @@ void fp::algorithm::Solve(std::shared_ptr<fp::landbasedrobot> robot)
         y = robot->get_y();
         std::cout << "current robot coordinate at goal "<<x <<"," <<y <<std::endl;
         std::cout << "Goal Reached" <<std::endl;
+        std::cerr << "goal reached" <<std::endl;
         Print_Visited_Nodes();
         MoveRobot(Stack, robot);
         break;
@@ -237,7 +244,6 @@ void fp::algorithm::SetUp() {
     fp::algorithm::displayNumber(width);
     fp::algorithm::log("height is :");
     fp::algorithm::displayNumber(height);
-    fp::algorithm::log("running");
 
     // Highlighting the Goal and Start coordinates in the simulator
     fp::API::setColor(0,0,'G');
@@ -275,8 +281,7 @@ void fp::algorithm::SetUp() {
 }
 
 void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbasedrobot> robot) {
-//    fp::algorithm::log("exiting setup:");
-//    fp::algorithm::log("lalalpp:");
+
     std::cout << "Moving  Robot" <<std::endl;
     std::cout << "Current robot start coordinates " << m <<"," << n <<std::endl;
     std::cout << "Current Robot direction = " << dir <<std::endl;
@@ -286,10 +291,6 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
     std::cout << "\n";
 
     // Creating an object from the Direction class
-    fp::Direction dirc;
-
-    // Setting the initial direction of the robot to North
-//    dir = dirc.NORTH;
     direc = 'w';
 
     int coordinate,x,y,m,n;
@@ -297,7 +298,8 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
 
 
     while (!path.empty()) {
-        fp::algorithm::log("forward");
+//    while(true){
+//        fp::API::moveForward();
         std::cout << "path not empty, following path" <<std::endl;
         coordinate = path.top();
         point = Get_Coordinates(coordinate);
@@ -312,6 +314,8 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
 
         //Checking for wall on Left
         if (fp::API::wallLeft()) {
+            std::cerr << "inside wall left" <<std::endl;
+            std::cerr << fp::API::wallLeft() << std::endl;
             if (dir == dirc.NORTH) {
                 direc = 'w';
             } else if (dir == dirc.WEST) {
@@ -339,8 +343,41 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
 
         }
 
+        //Checking for wall on front
+        if (fp::API::wallFront()) {
+            std::cerr << "inside wall front" <<std::endl;
+            std::cerr << fp::API::wallFront() << std::endl;
+
+            if (dir == dirc.NORTH) {
+                direc = 'n';
+            } else if (dir == dirc.WEST) {
+                direc = 'w';
+            } else if (dir == dirc.SOUTH) {
+                direc = 's';
+            } else if (dir == dirc.EAST) {
+                direc = 'e';
+            }
+            fp::API::setWall(x, y, direc);
+            if (dir == dirc.NORTH && y != 15) {
+                WallArray = SetWall(Set_Coordinates(x, y), Set_Coordinates(x, y + 1));
+            }
+
+            if (dir == dirc.EAST && x != 15) {
+                WallArray = SetWall(Set_Coordinates(x, y), Set_Coordinates(x + 1, y));
+            }
+            if (dir == dirc.WEST && x != 0) {
+                WallArray = SetWall(Set_Coordinates(x, y), Set_Coordinates(x - 1, y));
+            }
+            if (dir == dirc.SOUTH && y != 0) {
+                WallArray = SetWall(Set_Coordinates(x, y), Set_Coordinates(x, y - 1));
+            }
+        }
+
+
         // Checking for wall on Right
         if (fp::API::wallRight()) {
+            std::cerr << "inside wall right" <<std::endl;
+            std::cerr << fp::API::wallRight() << std::endl;
             if (dir == dirc.NORTH) {
                 direc = 'e';
             } else if (dir == dirc.WEST) {
@@ -365,33 +402,22 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
             if (dir == dirc.SOUTH && x != 0) {
                 WallArray = SetWall(Set_Coordinates(x, y), Set_Coordinates(x - 1, y));
             }
+
         }
 
-
-        // Checking for wall front
-        if (fp::API::wallFront()) {
-            fp::API::setWall(x, y, dir);
-            if (dir == dirc.NORTH && y != 15) {
-                WallArray = SetWall(Set_Coordinates(x, y), Set_Coordinates(x, y + 1));
-            }
-
-            if (dir == dirc.EAST && x != 15) {
-                WallArray = SetWall(Set_Coordinates(x, y), Set_Coordinates(x + 1, y));
-            }
-            if (dir == dirc.WEST && x != 0) {
-                WallArray = SetWall(Set_Coordinates(x, y), Set_Coordinates(x - 1, y));
-            }
-            if (dir == dirc.SOUTH && y != 0) {
-                WallArray = SetWall(Set_Coordinates(x, y), Set_Coordinates(x, y - 1));
-            }
-        }
-
-        // If the robot is facing North
         if (dir == dirc.NORTH) {
             // Moving Right
+            std::cerr << "inside robot motion North" <<std::endl;
+            std::cout << "prev coordinates = "<< x << y <<std::endl;
+            std::cout << "next coordinates = "<< m << n <<std::endl;
+
             if (m > x) {
                 if (fp::API::wallRight()) {
+                    std::cerr << "North inside wall right " <<std::endl;
+                    std::cerr << fp::API::wallRight() << std::endl;
                     std::cout << "Wall encountered when moving right, solve function called" << std::endl;
+                    std::cerr << "Wall encountered when moving right, solve function called" << std::endl;
+
                     robot->set_x(x);
                     robot->set_y(y);
                     Solve(robot);
@@ -399,7 +425,7 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                 std::cout << "Moving right" << std::endl;
                 dir = dirc.EAST;
                 fp::API::turnRight();
-
+                std::cerr << "Current Robot direction = " << dir <<std::endl;
             }
 
             //Moving Left
@@ -413,6 +439,7 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                 std::cout << "Moving Left" << std::endl;
                 dir = dirc.WEST;
                 fp::API::turnLeft();
+                std::cerr << "Current Robot direction = " << dir <<std::endl;
             }
 
             // Moving Forward
@@ -425,6 +452,7 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                 }
                 std::cout << "Moving Forward" << std::endl;
                 dir = dirc.NORTH;
+                std::cerr << "Current Robot direction = " << dir <<std::endl;
             }
 
             // Moving Down
@@ -440,10 +468,8 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                 }
                 std::cout << "Moving Backward" << std::endl;
                 dir = dirc.SOUTH;
-
-                //            fp::API::moveForward();
+                std::cerr << "Current Robot direction = " << dir <<std::endl;
             }
-            fp::API::moveForward();
         }
 
         // If the current direction is South
@@ -458,7 +484,7 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                 std::cout << "Moving right" << std::endl;
                 dir = dirc.WEST;
                 fp::API::turnRight();
-
+                std::cerr << "Current Robot direction = " << dir <<std::endl;
             }
 
             //Moving Left
@@ -472,6 +498,7 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                 std::cout << "Moving Left" << std::endl;
                 dir = dirc.EAST;
                 fp::API::turnLeft();
+                std::cerr << "Current Robot direction = " << dir <<std::endl;
             }
 
             // Moving Forward
@@ -484,6 +511,7 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                 }
                 std::cout << "Moving Forward" << std::endl;
                 dir = dirc.SOUTH;
+                std::cerr << "Current Robot direction = " << dir <<std::endl;
             }
 
             // Moving Down
@@ -499,9 +527,9 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                 }
                 std::cout << "Moving Backward" << std::endl;
                 dir = dirc.NORTH;
-                //            fp::API::moveForward();
+                std::cerr << "Current Robot direction = " << dir <<std::endl;
+
             }
-            fp::API::moveForward();
 
         }
 
@@ -517,6 +545,7 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                 std::cout << "Moving right" << std::endl;
                 dir = dirc.SOUTH;
                 fp::API::turnRight();
+                std::cerr << "Current Robot direction = " << dir <<std::endl;
 
             }
 
@@ -531,6 +560,7 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                 std::cout << "Moving Left" << std::endl;
                 dir = dirc.NORTH;
                 fp::API::turnLeft();
+                std::cerr << "Current Robot direction = " << dir <<std::endl;
             }
 
                 // Moving Forward
@@ -543,6 +573,7 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                 }
                 std::cout << "Moving Forward" << std::endl;
                 dir = dirc.EAST;
+                std::cerr << "Current Robot direction = " << dir <<std::endl;
             }
 
                 // Moving Down
@@ -558,10 +589,8 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                 }
                 std::cout << "Moving Backward" << std::endl;
                 dir = dirc.WEST;
-                //            fp::API::moveForward();
+                std::cerr << "Current Robot direction = " << dir <<std::endl;
             }
-            fp::API::moveForward();
-
         }
 
         // If the current direction is west
@@ -576,7 +605,7 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                 std::cout << "Moving right" << std::endl;
                 dir = dirc.NORTH;
                 fp::API::turnRight();
-
+                std::cerr << "Current Robot direction = " << dir <<std::endl;
             }
 
                 //Moving Left
@@ -590,6 +619,7 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                 std::cout << "Moving Left" << std::endl;
                 dir = dirc.SOUTH;
                 fp::API::turnLeft();
+                std::cerr << "Current Robot direction = " << dir <<std::endl;
             }
 
                 // Moving Forward
@@ -602,6 +632,7 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                 }
                 std::cout << "Moving Forward" << std::endl;
                 dir = dirc.WEST;
+                std::cerr << "Current Robot direction = " << dir <<std::endl;
             }
 
                 // Moving Down
@@ -617,16 +648,17 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                 }
                 std::cout << "Moving Backward" << std::endl;
                 dir = dirc.EAST;
-                //            fp::API::moveForward();
+                std::cerr << "Current Robot direction = " << dir <<std::endl;
             }
-            fp::API::moveForward();
-            fp::algorithm::log("forward");
-
         }
 
+        fp::API::moveForward();
+        std::cerr << "Current Robot direction = " << dir <<std::endl;
+        std::cout << "Moving forward dawwwww" <<std::endl;
 }
-}
+    std::cerr << "full outside" <<std::endl;
 
+}
 
 
 

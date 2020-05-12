@@ -8,6 +8,7 @@
 #include <memory>
 #include "../LandBasedRobot/landbasedrobot.h"
 #include "../Maze/maze.h"
+#include "../Direction/direction.h"
 
 
 namespace fp {
@@ -41,6 +42,7 @@ namespace fp {
         static bool CheckGoal(int x, int y);
         int Set_Coordinates(int x, int y);
         void log(const std::string& text);
+        void Boollog(const bool& text);
         void displayNumber(int num);
         void SetUp();
         void PrintStack(std::stack <int> s);

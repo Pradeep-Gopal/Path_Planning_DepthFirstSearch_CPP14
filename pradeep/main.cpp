@@ -11,8 +11,6 @@ int main(){
     std::shared_ptr<fp::landbasedrobot> wheeled = std::make_shared<fp::landbasedwheeled>("Husky");
     // Setting up the simulator with boundary information and start-goal information
 
-
-
     fp::algorithm algo;
     algo.SetUp();
     algo.Solve(wheeled);
