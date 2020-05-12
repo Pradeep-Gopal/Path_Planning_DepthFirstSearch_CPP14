@@ -14,8 +14,7 @@ int main(){
 
 
     fp::algorithm algo;
-    algo.Clear_Visited_Nodes();
-//    algo.SetUp();
+    algo.SetUp();
     algo.Solve(wheeled);
 
 //    std::array<int, 2> p = algo.Get_Coordinates(119);

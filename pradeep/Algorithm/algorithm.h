@@ -24,9 +24,6 @@ namespace fp {
         int m;
         int n;
         std::array<std::array<int, 256>, 256> WallArray;
-
-
-
         std::array<std::array<int, 16>, 16> VisitedNodes;
         std::stack<int> Stack;
 
@@ -35,8 +32,6 @@ namespace fp {
 //            fp::maze maze;
             WallArray =  InitializeMaze();
         }
-
-
 
         //Methods
         void Clear_Visited_Nodes();
@@ -49,6 +44,7 @@ namespace fp {
         void displayNumber(int num);
         void SetUp();
         void PrintStack(std::stack <int> s);
+        std::stack<int> ClearStack(std::stack <int> stack);
         void MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbasedrobot> ptr);
         std::stack<int> ReverseStack(std::stack <int> stack);
 

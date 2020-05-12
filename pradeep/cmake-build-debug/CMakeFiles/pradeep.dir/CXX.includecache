@@ -6,23 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/home/markose/CLionProjects/pradeep/API/api.h
+/home/prachu/Desktop/Robotics/pradeep/API/api.h
 string
 -
 
-/home/markose/CLionProjects/pradeep/Algorithm/algorithm.cpp
+/home/prachu/Desktop/Robotics/pradeep/Algorithm/algorithm.cpp
 iostream
 -
 algorithm.h
-/home/markose/CLionProjects/pradeep/Algorithm/algorithm.h
+/home/prachu/Desktop/Robotics/pradeep/Algorithm/algorithm.h
 ../Maze/maze.h
-/home/markose/CLionProjects/pradeep/Maze/maze.h
+/home/prachu/Desktop/Robotics/pradeep/Maze/maze.h
 ../API/api.h
-/home/markose/CLionProjects/pradeep/API/api.h
+/home/prachu/Desktop/Robotics/pradeep/API/api.h
 ../Direction/direction.h
-/home/markose/CLionProjects/pradeep/Direction/direction.h
+/home/prachu/Desktop/Robotics/pradeep/Direction/direction.h
 
-/home/markose/CLionProjects/pradeep/Algorithm/algorithm.h
+/home/prachu/Desktop/Robotics/pradeep/Algorithm/algorithm.h
 array
 -
 stack
@@ -30,19 +30,19 @@ stack
 memory
 -
 ../LandBasedRobot/landbasedrobot.h
-/home/markose/CLionProjects/pradeep/LandBasedRobot/landbasedrobot.h
+/home/prachu/Desktop/Robotics/pradeep/LandBasedRobot/landbasedrobot.h
 ../Maze/maze.h
-/home/markose/CLionProjects/pradeep/Maze/maze.h
+/home/prachu/Desktop/Robotics/pradeep/Maze/maze.h
 
-/home/markose/CLionProjects/pradeep/Direction/direction.h
+/home/prachu/Desktop/Robotics/pradeep/Direction/direction.h
 string
 -
 
-/home/markose/CLionProjects/pradeep/LandBasedRobot/landbasedrobot.h
+/home/prachu/Desktop/Robotics/pradeep/LandBasedRobot/landbasedrobot.h
 string
 -
 
-/home/markose/CLionProjects/pradeep/Maze/maze.h
+/home/prachu/Desktop/Robotics/pradeep/Maze/maze.h
 array
 -
 

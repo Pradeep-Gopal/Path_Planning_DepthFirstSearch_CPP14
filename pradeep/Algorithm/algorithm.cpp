@@ -49,8 +49,9 @@ void fp::algorithm::Print_Visited_Nodes()
 
 void fp::algorithm::Solve(std::shared_ptr<fp::landbasedrobot> robot)
 {
-    
     std::cout << "Solve function called" << std::endl;
+    Clear_Visited_Nodes();
+    Stack = ClearStack(Stack);
     int x{robot->get_x()};
     int y{robot->get_y()};
     int Start = Set_Coordinates(x,y);
@@ -233,13 +234,10 @@ void fp::algorithm::SetUp() {
     // Printing on Simulator screen
     fp::algorithm::log("running");
     fp::algorithm::log("Width is :");
-//    fp::algorithm::displayNumber(width);
+    fp::algorithm::displayNumber(width);
     fp::algorithm::log("height is :");
-    fp::algorithm::log("hi");
     fp::algorithm::displayNumber(height);
-
-    fp::algorithm::log("bye");
-    fp::algorithm::log("Hello");
+    fp::algorithm::log("running");
 
     // Highlighting the Goal and Start coordinates in the simulator
     fp::API::setColor(0,0,'G');
@@ -274,17 +272,18 @@ void fp::algorithm::SetUp() {
             }
         }
     }
-    fp::algorithm::log("lalalalappp:");
-    fp::algorithm::log("lalalpp:");
 }
 
 void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbasedrobot> robot) {
+//    fp::algorithm::log("exiting setup:");
+//    fp::algorithm::log("lalalpp:");
     std::cout << "Moving  Robot" <<std::endl;
     std::cout << "Current robot start coordinates " << m <<"," << n <<std::endl;
     std::cout << "Current Robot direction = " << dir <<std::endl;
     path = ReverseStack(path);
     std::cout << "Printing reversed stack" <<std::endl;
     PrintStack(path);
+    std::cout << "\n";
 
     // Creating an object from the Direction class
     fp::Direction dirc;
@@ -298,6 +297,8 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
 
 
     while (!path.empty()) {
+        fp::algorithm::log("forward");
+        std::cout << "path not empty, following path" <<std::endl;
         coordinate = path.top();
         point = Get_Coordinates(coordinate);
         x = point[0];
@@ -619,13 +620,12 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                 //            fp::API::moveForward();
             }
             fp::API::moveForward();
+            fp::algorithm::log("forward");
 
         }
 
 }
 }
-
-
 
 
 
@@ -665,6 +665,15 @@ std::stack<int> fp::algorithm::ReverseStack(std::stack<int> stack) {
         temp.push(item);
     }
     return temp;
+}
+
+std::stack<int> fp::algorithm::ClearStack(std::stack<int> stack) {
+
+    while (!stack.empty())
+    {
+        stack.pop();
+    }
+    return stack;
 }
 
 

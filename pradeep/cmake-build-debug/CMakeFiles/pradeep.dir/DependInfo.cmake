@@ -4,13 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/markose/CLionProjects/pradeep/API/api.cpp" "/home/markose/CLionProjects/pradeep/cmake-build-debug/CMakeFiles/pradeep.dir/API/api.cpp.o"
-  "/home/markose/CLionProjects/pradeep/Algorithm/algorithm.cpp" "/home/markose/CLionProjects/pradeep/cmake-build-debug/CMakeFiles/pradeep.dir/Algorithm/algorithm.cpp.o"
-  "/home/markose/CLionProjects/pradeep/LandBasedRobot/landbasedrobot.cpp" "/home/markose/CLionProjects/pradeep/cmake-build-debug/CMakeFiles/pradeep.dir/LandBasedRobot/landbasedrobot.cpp.o"
-  "/home/markose/CLionProjects/pradeep/LandBasedTracked/landbasedtracked.cpp" "/home/markose/CLionProjects/pradeep/cmake-build-debug/CMakeFiles/pradeep.dir/LandBasedTracked/landbasedtracked.cpp.o"
-  "/home/markose/CLionProjects/pradeep/LandBasedWheeled/landbasedwheeled.cpp" "/home/markose/CLionProjects/pradeep/cmake-build-debug/CMakeFiles/pradeep.dir/LandBasedWheeled/landbasedwheeled.cpp.o"
-  "/home/markose/CLionProjects/pradeep/Maze/maze.cpp" "/home/markose/CLionProjects/pradeep/cmake-build-debug/CMakeFiles/pradeep.dir/Maze/maze.cpp.o"
-  "/home/markose/CLionProjects/pradeep/main.cpp" "/home/markose/CLionProjects/pradeep/cmake-build-debug/CMakeFiles/pradeep.dir/main.cpp.o"
+  "/home/prachu/Desktop/Robotics/pradeep/API/api.cpp" "/home/prachu/Desktop/Robotics/pradeep/cmake-build-debug/CMakeFiles/pradeep.dir/API/api.cpp.o"
+  "/home/prachu/Desktop/Robotics/pradeep/Algorithm/algorithm.cpp" "/home/prachu/Desktop/Robotics/pradeep/cmake-build-debug/CMakeFiles/pradeep.dir/Algorithm/algorithm.cpp.o"
+  "/home/prachu/Desktop/Robotics/pradeep/LandBasedRobot/landbasedrobot.cpp" "/home/prachu/Desktop/Robotics/pradeep/cmake-build-debug/CMakeFiles/pradeep.dir/LandBasedRobot/landbasedrobot.cpp.o"
+  "/home/prachu/Desktop/Robotics/pradeep/LandBasedTracked/landbasedtracked.cpp" "/home/prachu/Desktop/Robotics/pradeep/cmake-build-debug/CMakeFiles/pradeep.dir/LandBasedTracked/landbasedtracked.cpp.o"
+  "/home/prachu/Desktop/Robotics/pradeep/LandBasedWheeled/landbasedwheeled.cpp" "/home/prachu/Desktop/Robotics/pradeep/cmake-build-debug/CMakeFiles/pradeep.dir/LandBasedWheeled/landbasedwheeled.cpp.o"
+  "/home/prachu/Desktop/Robotics/pradeep/Maze/maze.cpp" "/home/prachu/Desktop/Robotics/pradeep/cmake-build-debug/CMakeFiles/pradeep.dir/Maze/maze.cpp.o"
+  "/home/prachu/Desktop/Robotics/pradeep/main.cpp" "/home/prachu/Desktop/Robotics/pradeep/cmake-build-debug/CMakeFiles/pradeep.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
