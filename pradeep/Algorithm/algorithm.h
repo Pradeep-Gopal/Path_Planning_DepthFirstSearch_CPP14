@@ -49,7 +49,10 @@ namespace fp {
         std::stack<int> ClearStack(std::stack <int> stack);
         void MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbasedrobot> ptr);
         std::stack<int> ReverseStack(std::stack <int> stack);
+        void PrintStackSimulator(std::stack<int> s) ;
 
+        void HighlightPath(std::stack<int> stack);
+        void ClearPath(std::stack<int> s);
     };
 }
 

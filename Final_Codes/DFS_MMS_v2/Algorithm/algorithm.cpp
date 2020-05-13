@@ -186,13 +186,6 @@ void fp::algorithm::SetUp()
     width = fp::API::mazeWidth(); //Getting the width of the maze from the MMS
     height = fp::API::mazeHeight(); //Getting the height of the maze from the MMS
 
-    // Printing on Simulator screen
-    fp::algorithm::log("running");
-    fp::algorithm::log("Width is :");
-    fp::algorithm::displayNumber(width);
-    fp::algorithm::log("height is :");
-    fp::algorithm::displayNumber(height);
-
     // Highlighting the Goal and Start coordinates in the simulator
     fp::API::setColor(0,0,'y');
     fp::API::setText(0, 0, "Start");
@@ -233,7 +226,12 @@ void fp::algorithm::SetUp()
 void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbasedrobot> robot) {
 
     path = ReverseStack(path); // Reversing the stack sent from the Solve function
-//    HighlightPath(path); // Highlighting the maze in the robot
+    HighlightPath(path); // Highlighting the maze in the robot
+    coordinate = path.top(); //Getting the first for the robot to move to from the path
+    point = GetCoordinates(coordinate); //Converting the coordinates into x and y coordinates
+    x = point[0];
+    y = point[1];
+    fp::API::setColor(x,y,'G'); //highlighting the path traced by the robot
 
     while (!path.empty()) // Iterates till the robot moves and reaches the goal following the path
     {
@@ -348,7 +346,9 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                 {
                     robot->set_x(x); //Getting the current x coordinate of the robot
                     robot->set_y(y); //Getting the current y coordinate of the robot
-                    //ClearPath(path); //Clears the path highlighted in the maze
+                    ClearPath(path); //Clears the path highlighted in the maze
+//                    fp::API::clearAllColor(); //Clears all the coloured cells in the maze
+                    SetUp(); //Setting the Goal and Start cells on the maze
                     Solve(robot); //Solve function called to give a new path from the current robot location
                 }
                 dir = dirc.EAST; //Setting the robot direction to east
@@ -362,7 +362,9 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                 {
                     robot->set_x(x); //Getting the current x coordinate of the robot
                     robot->set_y(y); //Getting the current y coordinate of the robot
-                    //ClearPath(path); //Clears the path highlighted in the maze
+                    ClearPath(path); //Clears the path highlighted in the maze
+//                    fp::API::clearAllColor(); //Clears all the coloured cells in the maze
+                    SetUp(); //Setting the Goal and Start cells on the maze
                     Solve(robot); //Solve function called to give a new path from the current robot location
                 }
                 dir = dirc.WEST; //Setting the robot direction to west
@@ -376,7 +378,9 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                 {
                     robot->set_x(x); //Getting the current x coordinate of the robot
                     robot->set_y(y); //Getting the current y coordinate of the robot
-                    //ClearPath(path); //Clears the path highlighted in the maze
+                    ClearPath(path); //Clears the path highlighted in the maze
+//                    fp::API::clearAllColor(); //Clears all the coloured cells in the maze
+                    SetUp(); //Setting the Goal and Start cells on the maze
                     Solve(robot); //Solve function called to give a new path from the current robot location
                 }
                 dir = dirc.NORTH; //Setting the robot direction to north
@@ -391,7 +395,9 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                 {
                     robot->set_x(x); //Getting the current x coordinate of the robot
                     robot->set_y(y); //Getting the current y coordinate of the robot
-                    //ClearPath(path); //Clears the path highlighted in the maze
+                    ClearPath(path); //Clears the path highlighted in the maze
+//                    fp::API::clearAllColor(); //Clears all the coloured cells in the maze
+                    SetUp(); //Setting the Goal and Start cells on the maze
                     Solve(robot); //Solve function called to give a new path from the current robot location
                 }
                 dir = dirc.SOUTH; //Setting the robot direction to south
@@ -407,7 +413,9 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                 {
                     robot->set_x(x); //Getting the current x coordinate of the robot
                     robot->set_y(y); //Getting the current y coordinate of the robot
-                    //ClearPath(path); //Clears the path highlighted in the maze
+                    ClearPath(path); //Clears the path highlighted in the maze
+//                    fp::API::clearAllColor(); //Clears all the coloured cells in the maze
+                    SetUp(); //Setting the Goal and Start cells on the maze
                     Solve(robot); //Solve function called to give a new path from the current robot location
                 }
                 dir = dirc.WEST; //Setting the robot direction to west
@@ -420,7 +428,9 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                 {
                     robot->set_x(x); //Getting the current x coordinate of the robot
                     robot->set_y(y); //Getting the current y coordinate of the robot
-                    //ClearPath(path); //Clears the path highlighted in the maze
+                    ClearPath(path); //Clears the path highlighted in the maze
+//                    fp::API::clearAllColor(); //Clears all the coloured cells in the maze
+                    SetUp(); //Setting the Goal and Start cells on the maze
                     Solve(robot); //Solve function called to give a new path from the current robot location
                 }
                 dir = dirc.EAST; //Setting the robot direction to east
@@ -433,7 +443,9 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                 {
                     robot->set_x(x); //Getting the current x coordinate of the robot
                     robot->set_y(y); //Getting the current y coordinate of the robot
-                    //ClearPath(path); //Clears the path highlighted in the maze
+                    ClearPath(path); //Clears the path highlighted in the maze
+//                    fp::API::clearAllColor(); //Clears all the coloured cells in the maze
+                    SetUp(); //Setting the Goal and Start cells on the maze
                     Solve(robot); //Solve function called to give a new path from the current robot location
                 }
                 dir = dirc.SOUTH; //Setting the robot direction to south
@@ -448,7 +460,9 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                 {
                     robot->set_x(x); //Getting the current x coordinate of the robot
                     robot->set_y(y); //Getting the current y coordinate of the robot
-                    //ClearPath(path); //Clears the path highlighted in the maze
+                    ClearPath(path); //Clears the path highlighted in the maze
+//                    fp::API::clearAllColor(); //Clears all the coloured cells in the maze
+                    SetUp(); //Setting the Goal and Start cells on the maze
                     Solve(robot); //Solve function called to give a new path from the current robot location
                 }
                 dir = dirc.NORTH; //Setting the robot direction to north
@@ -466,7 +480,9 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                 {
                     robot->set_x(x); //Getting the current x coordinate of the robot
                     robot->set_y(y); //Getting the current y coordinate of the robot
-                    //ClearPath(path); //Clears the path highlighted in the maze
+                    ClearPath(path); //Clears the path highlighted in the maze
+//                    fp::API::clearAllColor(); //Clears all the coloured cells in the maze
+                    SetUp(); //Setting the Goal and Start cells on the maze
                     Solve(robot); //Solve function called to give a new path from the current robot location
                 }
                 dir = dirc.SOUTH; //Setting the robot direction to south
@@ -479,7 +495,9 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                 {
                     robot->set_x(x); //Getting the current x coordinate of the robot
                     robot->set_y(y); //Getting the current y coordinate of the robot
-                    //ClearPath(path); //Clears the path highlighted in the maze
+                    ClearPath(path); //Clears the path highlighted in the maze
+//                    fp::API::clearAllColor(); //Clears all the coloured cells in the maze
+                    SetUp(); //Setting the Goal and Start cells on the maze
                     Solve(robot); //Solve function called to give a new path from the current robot location
                 }
                 dir = dirc.NORTH; //Setting the robot direction to North
@@ -492,7 +510,9 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                 {
                     robot->set_x(x); //Getting the current x coordinate of the robot
                     robot->set_y(y); //Getting the current y coordinate of the robot
-                    //ClearPath(path); //Clears the path highlighted in the maze
+                    ClearPath(path); //Clears the path highlighted in the maze
+//                    fp::API::clearAllColor(); //Clears all the coloured cells in the maze
+                    SetUp(); //Setting the Goal and Start cells on the maze
                     Solve(robot); //Solve function called to give a new path from the current robot location
                 }
                 dir = dirc.EAST; //Setting the robot direction to east
@@ -507,7 +527,9 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                 {
                     robot->set_x(x); //Getting the current x coordinate of the robot
                     robot->set_y(y); //Getting the current y coordinate of the robot
-                    //ClearPath(path); //Clears the path highlighted in the maze
+                    ClearPath(path); //Clears the path highlighted in the maze
+//                    fp::API::clearAllColor(); //Clears all the coloured cells in the maze
+                    SetUp(); //Setting the Goal and Start cells on the maze
                     Solve(robot); //Solve function called to give a new path from the current robot location
                 }
                 dir = dirc.WEST; //Setting the robot direction to west
@@ -523,7 +545,9 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                 {
                     robot->set_x(x); //Getting the current x coordinate of the robot
                     robot->set_y(y); //Getting the current y coordinate of the robot
-                    //ClearPath(path); //Clears the path highlighted in the maze
+                    ClearPath(path); //Clears the path highlighted in the maze
+//                    fp::API::clearAllColor(); //Clears all the coloured cells in the maze
+                    SetUp(); //Setting the Goal and Start cells on the maze
                     Solve(robot); //Solve function called to give a new path from the current robot location
                 }
                 dir = dirc.NORTH; //Setting the robot direction to north
@@ -536,7 +560,9 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                 {
                     robot->set_x(x); //Getting the current x coordinate of the robot
                     robot->set_y(y); //Getting the current y coordinate of the robot
-                    //ClearPath(path); //Clears the path highlighted in the maze
+                    ClearPath(path); //Clears the path highlighted in the maze
+//                    fp::API::clearAllColor(); //Clears all the coloured cells in the maze
+                    SetUp(); //Setting the Goal and Start cells on the maze
                     Solve(robot); //Solve function called to give a new path from the current robot location
                 }
                 dir = dirc.SOUTH; //Setting the robot direction to south
@@ -549,7 +575,9 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                 {
                     robot->set_x(x); //Getting the current x coordinate of the robot
                     robot->set_y(y); //Getting the current y coordinate of the robot
-                    //ClearPath(path); //Clears the path highlighted in the maze
+                    ClearPath(path); //Clears the path highlighted in the maze
+//                    fp::API::clearAllColor(); //Clears all the coloured cells in the maze
+                    SetUp(); //Setting the Goal and Start cells on the maze
                     Solve(robot); //Solve function called to give a new path from the current robot location
                 }
                 dir = dirc.WEST; //Setting the robot direction to west
@@ -564,7 +592,9 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                 {
                     robot->set_x(x); //Getting the current x coordinate of the robot
                     robot->set_y(y); //Getting the current y coordinate of the robot
-                    //ClearPath(path); //Clears the path highlighted in the maze
+                    ClearPath(path); //Clears the path highlighted in the maze
+//                    fp::API::clearAllColor(); //Clears all the coloured cells in the maze
+                    SetUp(); //Setting the Goal and Start cells on the maze
                     Solve(robot); //Solve function called to give a new path from the current robot location
                 }
                 dir = dirc.EAST; //Setting the robot direction to east
@@ -575,7 +605,7 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
         VisitedArray[m][n]=1; //Marking the current node as visited
         fp::API::moveForward(); //Moving the robot forward
         if (!CheckGoal(m,n))
-            fp::API::setColor(m,n,'g'); //highlighting the path traced by the robot
+            fp::API::setColor(m,n,'G'); //highlighting the path traced by the robot
         if (CheckGoal(m,n)){ //Checking if the current coordinates is the goal
             std::cerr << "Goal Reached by the Robot in the MMS" <<std::endl;
             exit(0);

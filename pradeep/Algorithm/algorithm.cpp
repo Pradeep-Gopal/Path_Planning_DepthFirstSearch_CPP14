@@ -58,6 +58,8 @@ void fp::algorithm::Solve(std::shared_ptr<fp::landbasedrobot> robot)
     std::cout << "Solve function called" << std::endl;
     Clear_Visited_Nodes();
     Stack = ClearStack(Stack);
+    std::cerr << "Printing emtpy stack" << std::endl;
+    PrintStackSimulator(Stack);
     int x{robot->get_x()};
     int y{robot->get_y()};
     int Start = Set_Coordinates(x,y);
@@ -292,6 +294,8 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
     path = ReverseStack(path);
     std::cout << "Printing reversed stack" <<std::endl;
     PrintStack(path);
+    std::cerr << "Highlighting Pathhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh" <<std::endl;
+    HighlightPath(path);
     std::cout << "\n";
 
     // Creating an object from the Direction class
@@ -300,7 +304,8 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
     int coordinate,x,y,m,n;
     std::array<int, 2> point;
 
-
+    std::cerr <<"Printing stack to be followed" <<std::endl;
+    PrintStackSimulator(path);
     while (!path.empty()) {
         std::cerr <<"\n"<<std::endl;
         std::cout << "path not empty, following path" <<std::endl;
@@ -318,9 +323,9 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
 
 
         //Checking for wall on Left
-        std::cerr << "outside left value = " << fp::API::wallLeft() <<std::endl;
+//        std::cerr << "outside left value = " << fp::API::wallLeft() <<std::endl;
         if (fp::API::wallLeft()) {
-            std::cerr << "inside wall left = " << fp::API::wallLeft() <<std::endl;
+//            std::cerr << "inside wall left = " << fp::API::wallLeft() <<std::endl;
             if (dir == dirc.NORTH) {
                 direc = 'w';
             } else if (dir == dirc.WEST) {
@@ -355,14 +360,14 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
 //                WallArray = SetWall(Set_Coordinates(x, y), Set_Coordinates(x + 1, y));
                 WallArray[Set_Coordinates(x, y)][Set_Coordinates(x+1, y)] = 1;
             }
-            std::cerr << "exiting wall left = " << fp::API::wallLeft() <<std::endl;
+//            std::cerr << "exiting wall left = " << fp::API::wallLeft() <<std::endl;
 
         }
 
-        std::cerr << "outside front value = " << fp::API::wallFront() <<std::endl;
+//        std::cerr << "outside front value = " << fp::API::wallFront() <<std::endl;
         //Checking for wall on front
         if (fp::API::wallFront()) {
-            std::cerr << "inside wall front = " << fp::API::wallFront() <<std::endl;
+//            std::cerr << "inside wall front = " << fp::API::wallFront() <<std::endl;
 
             if (dir == dirc.NORTH) {
                 direc = 'n';
@@ -402,9 +407,9 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
         }
 
         // Checking for wall on Right
-        std::cerr << "outside right value = " << fp::API::wallRight() <<std::endl;
+//        std::cerr << "outside right value = " << fp::API::wallRight() <<std::endl;
         if (fp::API::wallRight()) {
-            std::cerr << "inside wall right = " << fp::API::wallRight() <<std::endl;
+//            std::cerr << "inside wall right = " << fp::API::wallRight() <<std::endl;
             if (dir == dirc.NORTH) {
                 direc = 'e';
             } else if (dir == dirc.WEST) {
@@ -460,6 +465,8 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                     std::cerr << "Wall encountered when moving right, solve function called" << std::endl;
                     robot->set_x(x);
                     robot->set_y(y);
+                    ClearPath(Stack);
+                    std::cerr << "Cleared Path" <<std::endl;
                     Solve(robot);
                 }
                 std::cout << "Moving right" << std::endl;
@@ -475,6 +482,7 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                     std::cout << "Wall encountered when moving left, solve function called" << std::endl;
                     robot->set_x(x);
                     robot->set_y(y);
+                    ClearPath(Stack);
                     Solve(robot);
                 }
                 std::cout << "Moving Left" << std::endl;
@@ -490,6 +498,7 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                     std::cout << "Wall encountered when moving forward, solve function called" << std::endl;
                     robot->set_x(x);
                     robot->set_y(y);
+                    ClearPath(Stack);
                     Solve(robot);
                 }
                 std::cout << "Moving Forward" << std::endl;
@@ -508,6 +517,7 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                     std::cout << "Wall encountered when moving backward, solve function called" << std::endl;
                     robot->set_x(x);
                     robot->set_y(y);
+                    ClearPath(Stack);
                     Solve(robot);
                 }
                 std::cout << "Have to move backward" << std::endl;
@@ -523,6 +533,7 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                     std::cout << "Wall encountered when moving right, solve function called" << std::endl;
                     robot->set_x(x);
                     robot->set_y(y);
+                    ClearPath(Stack);
                     Solve(robot);
                 }
                 std::cout << "Moving right" << std::endl;
@@ -537,6 +548,7 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                     std::cout << "Wall encountered when moving left, solve function called" << std::endl;
                     robot->set_x(x);
                     robot->set_y(y);
+                    ClearPath(Stack);
                     Solve(robot);
                 }
                 std::cout << "Moving Left" << std::endl;
@@ -551,6 +563,7 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                     std::cout << "Wall encountered when moving forward, solve function called" << std::endl;
                     robot->set_x(x);
                     robot->set_y(y);
+                    ClearPath(Stack);
                     Solve(robot);
                 }
                 std::cout << "Moving Forward" << std::endl;
@@ -567,6 +580,7 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                     std::cout << "Wall encountered when moving backward, solve function called" << std::endl;
                     robot->set_x(x);
                     robot->set_y(y);
+                    ClearPath(Stack);
                     Solve(robot);
                 }
                 std::cout << "Moving Backward" << std::endl;
@@ -584,6 +598,7 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                     std::cout << "Wall encountered when moving right, solve function called" << std::endl;
                     robot->set_x(x);
                     robot->set_y(y);
+                    ClearPath(Stack);
                     Solve(robot);
                 }
                 std::cout << "Moving right" << std::endl;
@@ -599,6 +614,7 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                     std::cout << "Wall encountered when moving left, solve function called" << std::endl;
                     robot->set_x(x);
                     robot->set_y(y);
+                    ClearPath(Stack);
                     Solve(robot);
                 }
                 std::cout << "Moving Left" << std::endl;
@@ -613,6 +629,7 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                     std::cout << "Wall encountered when moving forward, solve function called" << std::endl;
                     robot->set_x(x);
                     robot->set_y(y);
+                    ClearPath(Stack);
                     Solve(robot);
                 }
                 std::cout << "Moving Forward" << std::endl;
@@ -629,6 +646,7 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                     std::cout << "Wall encountered when moving backward, solve function called" << std::endl;
                     robot->set_x(x);
                     robot->set_y(y);
+                    ClearPath(Stack);
                     Solve(robot);
                 }
                 std::cout << "Moving Backward" << std::endl;
@@ -644,6 +662,7 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                     std::cout << "Wall encountered when moving right, solve function called" << std::endl;
                     robot->set_x(x);
                     robot->set_y(y);
+                    ClearPath(Stack);
                     Solve(robot);
                 }
                 std::cout << "Moving right" << std::endl;
@@ -658,6 +677,7 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                     std::cout << "Wall encountered when moving left, solve function called" << std::endl;
                     robot->set_x(x);
                     robot->set_y(y);
+                    ClearPath(Stack);
                     Solve(robot);
                 }
                 std::cout << "Moving Left" << std::endl;
@@ -672,6 +692,7 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                     std::cout << "Wall encountered when moving forward, solve function called" << std::endl;
                     robot->set_x(x);
                     robot->set_y(y);
+                    ClearPath(Stack);
                     Solve(robot);
                 }
                 std::cout << "Moving Forward" << std::endl;
@@ -688,6 +709,7 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
                     std::cout << "Wall encountered when moving backward, solve function called" << std::endl;
                     robot->set_x(x);
                     robot->set_y(y);
+                    ClearPath(Stack);
                     Solve(robot);
                 }
                 std::cout << "Moving Backward" << std::endl;
@@ -701,7 +723,8 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
         std::cout << "Moving forward dawwwww" <<std::endl;
         std::cerr << "Robot moving forward executed" <<std::endl;
         std::cerr << "Current Robot coordinates = " << m <<" " << n <<std::endl;
-}
+        fp::API::setColor(m,n,'Y');
+    }
 }
 
 
@@ -751,8 +774,59 @@ std::stack<int> fp::algorithm::ClearStack(std::stack<int> stack) {
     }
     return stack;
 }
+void fp::algorithm::PrintStackSimulator(std::stack<int> s) {
+//    std::cout << "Print stack called" <<std::endl;
+    // If stack is empty then return
+    if (s.empty())
+        return;
+
+    int x = s.top();
+
+    // Pop the top element of the stack
+    s.pop();
+
+    // Recursively call the function PrintStack
+    PrintStackSimulator(s);
+
+    // Print the stack element starting
+    // from the bottom
+    std::cerr << x << " ";
+
+    // Push the same element onto the stack
+    // to preserve the order
+    s.push(x);
+}
+
+void fp::algorithm::HighlightPath(std::stack<int> s) {
+
+    int x;
+    while (!s.empty())
+    {
+        x = s.top();
+        std::array<int, 2> point;
+        point = Get_Coordinates(x);
+        fp::API::setColor(point[0], point[1], 'g');
+//        std::cerr << point[0] <<"," << point[1] << std::endl;
+        s.pop();
+    }
 
 
+}
 
+void fp::algorithm::ClearPath(std::stack<int> s) {
+    int x;
+    while (!s.empty())
+    {
+        x = s.top();
+        std::array<int, 2> point;
+        point = Get_Coordinates(x);
+        if (!CheckGoal(point[0], point[1]))
+        {
+            fp::API::clearColor(point[0], point[1]);
+//            std::cerr << point[0] <<"," << point[1] << std::endl;
+        }
+        s.pop();
+    }
+}
 
 
