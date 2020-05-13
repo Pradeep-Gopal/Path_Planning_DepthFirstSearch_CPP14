@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="pradeep" targetName="pradeep" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="36e42970-8aed-4a49-99f1-ec7f1b18e086" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1bmk8CSJemwOqzZWQHk4DprMLNR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RunManager">
+    <configuration name="pradeep" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pradeep" TARGET_NAME="pradeep" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="pradeep" RUN_TARGET_NAME="pradeep">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="36e42970-8aed-4a49-99f1-ec7f1b18e086" name="Default Changelist" comment="" />
+      <created>1589244494799</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589244494799</updated>
+      <workItem from="1589244496382" duration="16072000" />
+      <workItem from="1589296159906" duration="62000" />
+      <workItem from="1589296250906" duration="27846000" />
+      <workItem from="1589343520651" duration="18814000" />
+      <workItem from="1589362607705" duration="2956000" />
+      <workItem from="1589386592681" duration="10892000" />
+      <workItem from="1589400128297" duration="3668000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="979" y="317" width="428" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1589297822706">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state x="979" y="317" key="#com.intellij.ide.util.MemberChooser/65.24.1855.1056@65.24.1855.1056" timestamp="1589297822706" />
+    <state x="980" y="319" width="428" height="562" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1589245977743" />
+    <state x="775" y="308" width="424" height="484" key="FileChooserDialogImpl" timestamp="1589394325847">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state x="775" y="308" key="FileChooserDialogImpl/65.24.1855.1056@65.24.1855.1056" timestamp="1589394325847" />
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1589261656165" />
+    <state width="1809" height="365" key="GridCell.Tab.0.bottom" timestamp="1589362571161">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state width="1809" height="365" key="GridCell.Tab.0.bottom/65.24.1855.1056@65.24.1855.1056" timestamp="1589362571161" />
+    <state width="903" height="303" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1589260802917" />
+    <state width="1809" height="365" key="GridCell.Tab.0.center" timestamp="1589362571160">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state width="1809" height="365" key="GridCell.Tab.0.center/65.24.1855.1056@65.24.1855.1056" timestamp="1589362571160" />
+    <state width="903" height="303" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1589260802916" />
+    <state width="1809" height="365" key="GridCell.Tab.0.left" timestamp="1589362571160">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state width="1809" height="365" key="GridCell.Tab.0.left/65.24.1855.1056@65.24.1855.1056" timestamp="1589362571160" />
+    <state width="903" height="303" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1589260802916" />
+    <state width="1809" height="365" key="GridCell.Tab.0.right" timestamp="1589362571160">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state width="1809" height="365" key="GridCell.Tab.0.right/65.24.1855.1056@65.24.1855.1056" timestamp="1589362571160" />
+    <state width="903" height="303" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1589260802916" />
+    <state width="1809" height="365" key="GridCell.Tab.1.bottom" timestamp="1589362571162">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state width="1809" height="365" key="GridCell.Tab.1.bottom/65.24.1855.1056@65.24.1855.1056" timestamp="1589362571162" />
+    <state width="903" height="303" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1589260790140" />
+    <state width="1809" height="365" key="GridCell.Tab.1.center" timestamp="1589362571161">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state width="1809" height="365" key="GridCell.Tab.1.center/65.24.1855.1056@65.24.1855.1056" timestamp="1589362571161" />
+    <state width="903" height="303" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1589260790139" />
+    <state width="1809" height="365" key="GridCell.Tab.1.left" timestamp="1589362571161">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state width="1809" height="365" key="GridCell.Tab.1.left/65.24.1855.1056@65.24.1855.1056" timestamp="1589362571161" />
+    <state width="903" height="303" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1589260790139" />
+    <state width="1809" height="365" key="GridCell.Tab.1.right" timestamp="1589362571161">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state width="1809" height="365" key="GridCell.Tab.1.right/65.24.1855.1056@65.24.1855.1056" timestamp="1589362571161" />
+    <state width="903" height="303" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1589260790139" />
+    <state x="656" y="251" key="run.anything.popup" timestamp="1589398614695">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state x="656" y="251" key="run.anything.popup/65.24.1855.1056@65.24.1855.1056" timestamp="1589398614695" />
+    <state x="657" y="253" key="run.anything.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1589259760491" />
+    <state x="655" y="255" width="673" height="680" key="search.everywhere.popup" timestamp="1589360214434">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state x="655" y="255" width="673" height="680" key="search.everywhere.popup/65.24.1855.1056@65.24.1855.1056" timestamp="1589360214434" />
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1589261965858" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Maze/maze.h</url>
+          <line>11</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
