@@ -113,7 +113,7 @@ void fp::algorithm::Solve(std::shared_ptr<fp::landbasedrobot> robot)
             std::cout << "Final value pushed in stack = ";
             std::cout << Set_Coordinates(x,y) << std::endl;
             Stack.push(Set_Coordinates(x,y));
-            std::cout << "Printing Stack Solve Down" <<std::endl;
+            std::cerr << "Printing Stack Solve Down" <<std::endl;
             PrintStack(Stack);
             std::cout << "\n";
         }
@@ -141,7 +141,7 @@ void fp::algorithm::Solve(std::shared_ptr<fp::landbasedrobot> robot)
             std::cout << "Final value pushed in stack = ";
             std::cout << Set_Coordinates(x,y) << std::endl;
             Stack.push(Set_Coordinates(x,y));
-            std::cout << "Printing Stack Solve Right" <<std::endl;
+            std::cerr << "Printing Stack Solve Right" <<std::endl;
             PrintStack(Stack);
             std::cout << "\n";
         }
@@ -218,10 +218,14 @@ void fp::algorithm::Solve(std::shared_ptr<fp::landbasedrobot> robot)
                 Solution.pop();
             }
             else{
-                Stack.pop();
                 int NewCoordinate = Stack.top();
-                std::cerr << "New Robot Location then after popping" << std::endl;
                 std::array <int,2> point;
+                point = Get_Coordinates(NewCoordinate);
+
+                VisitedNodes[point[0]][point[1]] = 1;
+                Stack.pop();
+                NewCoordinate = Stack.top();
+                std::cerr << "New Robot Location then after popping" << std::endl;
                 point = Get_Coordinates(NewCoordinate);
                 std::cerr << "x = " << point[0] << std::endl;
                 std::cerr << "y = " << point[1] << std::endl;
@@ -377,6 +381,7 @@ void fp::algorithm::MoveRobot(std::stack<int> path, std::shared_ptr<fp::landbase
     std::cout << "Current Robot direction = " << dir <<std::endl;
     path = ReverseStack(path);
     std::cout << "Printing reversed stack" <<std::endl;
+    std::cerr << "Printing reversed stack" <<std::endl;
     PrintStack(path);
     std::cout << "\n";
 
